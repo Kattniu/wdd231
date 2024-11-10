@@ -1,0 +1,156 @@
+:root {
+    --nav-color: #003366;
+    --bottom-color: #800000;
+    --bottom-color2: #000000;
+    --color-letra: #ffffff;
+    --color-extra: #D3D3D3;
+    --color-extra2: #FFD700;
+    --color-extra3: #ADFF2F;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-extra);
+}
+
+header {
+    background-color: var(--nav-color);
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------*/
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+
+}
+
+nav ul li a {
+
+    color: var(--color-extra);
+    text-decoration: none;        
+    }
+
+#hamburger {
+    font-size: 20px;
+    display: none; /* Solo visible en pantallas pequeñas */
+
+}
+/*---------------------------------------------------------------*/
+
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-letra);
+    margin: 20px;
+}
+
+.mifoto {
+    display: block;
+    width: 80px;
+    border-radius: 5%;
+    box-shadow: 0px 5px 10px 0px var(--bottom-color2);
+    margin-right: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+.course-work, .lima, .certificates {
+    background-color: var(--color-letra);
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px var(--bottom-color2);
+}
+
+.certificates {
+    text-align: center;
+}
+
+.certificates h1 {
+    color: var(--nav-color);
+    margin-bottom: 1em;
+}
+/*---------------------------------------------------*/
+/* Estilos para los botones de filtro */
+.filter-buttom {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+
+.filter-buttom button {
+    background-color: var(--bottom-color2);
+    color: var(--color-letra);
+    border: none;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-buttom button:hover {
+    background-color: #444;
+}
+/*---------------------------------------------------------------------------*/
+/* Estilos para los botones de cursos */
+.certificates-buttom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.certificates-buttom button {
+    background-color: var(--bottom-color);
+    color: var(--color-letra);
+    padding: 1em 2em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    min-width: 150px; /* Asegura que todos los botones tengan el mismo ancho */
+}
+
+.certificates-buttom button:nth-child(odd) { /*odd me permite aplicar a los elemntos en posiciones imoares dentro del mi contenedor  */
+    background-color: var(--bottom-color); /*  color rojo oscuro */
+}
+
+.certificates-buttom button:nth-child(even) {
+    background-color:var(--color-extra); /*color gris*/
+    color:var(--bottom-color2)
+}
+
+.certificates-buttom button:hover {
+    background-color: var(--nav-color);
+    color:var(--color-extra)
+}
+
+footer {
+    background-color: var(--nav-color);
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
