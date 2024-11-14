@@ -1,10 +1,3 @@
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show'); 
-});
 
 document.addEventListener("DOMContentLoaded", () => {
     const allButton = document.querySelector(".filter-buttom button:nth-child(1)");
@@ -14,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //Con todos los botones:
-    allButton.addEventListener("click", () => {
-        courses.forEach(course => {
+allButton.addEventListener("click", () => {
+            courses.forEach(course => {
             course.style.display = "inline-block"; // Mostrar todos los cursos
         });
     });
 
 // con los botones de cse:
     cseButton.addEventListener("click", () => {
-        courses.forEach(course => {
+            courses.forEach(course => {
             if (course.classList.contains("cse")) {
                 course.style.display = "inline-block"; // Mostrar solo cursos de CSE
             } else {
@@ -43,4 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 document.getElementById("lastModified").textContent = document.lastModified;
+
+// Seleccionamos todos los enlaces en el documento
+const links = document.querySelectorAll('a');
+
+// Iterar sobre todos los enlaces y añadir target="_blank" :)
+links.forEach(link => {
+     link.setAttribute('target', '_blank');
+ });

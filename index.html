@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/style-large.css">
         <script src="scripts/script.js" defer></script>
+        <script src="scripts/script-menu.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
@@ -34,15 +35,14 @@
         <h1>Katherine G.Osorio</h1>
     </div>
 
-    <nav>
-        <div id="hamburger">&#9776;</div>
-        <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#chamber">Chamber</a></li>
-            <li><a href="https://github.com/Kattniu">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/katherine-gonzales-5b8375256/">LinkedIn</a></li>
-        </ul>
+    <button type="button" id="menu"></button>
+    <nav class="navigation">
+            <a href="#home" title="Home">Home</a></li>
+            <a href="#chamber" title="Chamber">Chamber</a></li>
+            <a href="https://github.com/Kattniu" title="GitHub">GitHub Profile</a></li>
+            <a href="https://www.linkedin.com/in/katherine-gonzales-5b8375256/" title="linkInd">LinkedIn</a></li>
     </nav>
+
     </header>
 
 
@@ -63,9 +63,9 @@
         <section class="certificates">
             <h1>Web and Computer Programming Certificate</h1>
             <div class="filter-buttom">
-                <button type="buttom">All</button>
-                <button type="buttom">CSE</button>
-                <button type="buttom">WDD</button>
+                <button type="button">All</button>
+                <button type="button">CSE</button>
+                <button type="button">WDD</button>
             </div>
             <hr>
             <div class="certificates-buttom">

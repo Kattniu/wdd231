@@ -1,5 +1,5 @@
 
-@media (min-width: 768px) {
+@media (min-width: 37.5em) {
     
     .header-content h1 {
         font-size: 2em;
@@ -17,23 +17,19 @@
     .certificates {
         width: 100%;
     }
-    nav ul li {
-        margin-right: 40px; /* Más espacio entre los elementos del menú */
-    }
+    #menu {
+		display: none; /* hide hamburger button */
+	}
 
-    #nav-menu li a:hover {
-        background-color: #544eac;
-        color: #f4f4f4;
-        border-radius: 5px;
-        }
-    
-    #nav-menu li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.3rem;
-            padding: 10px;
-            display: block;
-            transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
-        }
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+
 
 }
