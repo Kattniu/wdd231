@@ -36,7 +36,7 @@ allButton.addEventListener("click", () => {
     });
 });
 
-
+document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
 // Seleccionamos todos los enlaces en el documento
