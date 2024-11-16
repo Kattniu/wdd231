@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { //addevenlistener registra un evento
     const allButton = document.querySelector(".filter-buttom button:nth-child(1)");
     const cseButton = document.querySelector(".filter-buttom button:nth-child(2)");
     const wddButton = document.querySelector(".filter-buttom button:nth-child(3)");
