@@ -1,0 +1,321 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: #b5cbe0;
+  }
+
+/*--header----------logo y h1-------------------------*/
+header {
+    background-color: #1e293b; /* Azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 1rem 2rem; /* Espaciado interno arriba/abajo (1rem) y a los lados (2rem) */
+}
+.header-container {
+    display: flex; /* Alinea elementos en fila */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    flex-wrap: nowrap; /* Evita que los elementos salten a una nueva fila */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.logo img {
+    max-width: 80px; /* El ancho máximo de la imagen es 80px */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+header h1 {
+    font-size: 2rem; /* Tamaño de fuente del título */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    margin: 0; /* Elimina el margen alrededor del título */
+    color: #d1e7fd; /* Azul claro */
+}
+
+.navigation {
+    display: flex; /* Alinea los elementos del menú en una fila */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    position: relative; /* Permite posicionar elementos hijos de forma relativa */
+}
+
+/*------boton del menu (hamburguesa)------*/
+#menu {
+    font-size: 1rem; /* Tamaño del ícono del menú */
+    background: none; /* Elimina el fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    color: white; /* Cambia el color del ícono a blanco */
+    cursor: pointer; /* Cambia el cursor al estilo de "clic" */
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "✖️";
+}
+
+/*------------Estilo de los enlaces (dentro del menu)------*/
+
+.menu-links{ 
+    display: flex; /*Alinea los enlaces en una fila */
+    gap: 1rem; /*Los espacios entre los enlaces*/
+}
+.menu-links a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;/*Los enlaces se vuelven "negrita"*/
+    transition: color 0.3s ease;/*agregar una transicion suave cuando cambia de color*/
+
+}
+.menu-links a:hover {
+    color: #90cdf4; /* Cambia el color al pasar el ratón a azul claro */
+    background-color:#253144 ;
+    border-radius: 10px;
+}
+.menu-links .active {
+    border-bottom: 2px solid #90cdf4; /* Añade una línea debajo del enlace activo */
+}
+.navigation.open .menu-links {
+    display: block; /* Muestra el menú en bloque */
+    background-color: #1e293b; /* Fondo azul oscuro */
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(213, 200, 200, 0.2); /* Sombra para destacar el menú */
+    z-index: 10; /* Lo coloca encima de otros elementos */
+}
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color:aliceblue;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+/*------------Main--------------------------------*/
+/* General styling for the main container */
+main {
+    margin: 20px auto; /* Centra el main horizontalmente, crea espacio externo de 20px abajo y arriba, y auto lo centra   */
+    max-width: 1200px; /* Define un ancho máximo, para que no ocupe todo el ancho de la pantalla */
+    padding: 1rem; /*Agregar espacio interno uniforme alrededor del contenido*/
+    background-color: #1e293b; /* Azul oscuro */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(48, 47, 50, 0.968); /* Sombra ligera al rededor de todo el contenido de main para destacar, simulamos un efecto "flotacion" */
+    color: #d1e7fd; /* Texto en azul claro */
+}
+
+/*-----------------Style for the toggle menu buttons(grid y list)*/
+.main-menu {
+    text-align: center;/*Alineamos el contenido al centro */
+    margin-bottom: 2rem;/*Aregamos un espacio inferior para que este mas lejos del contenido de abajo*/
+}
+.main-menu button { /*Estilos basicos para nuestros botones grid y list*/
+    padding: 0.8rem 1.2rem; /*Definimos un espacio interno amplio para que los botones seas comodos y estilosos de clicar */
+    font-weight: bold;/*texto negrita*/
+    font-size: 1rem;
+    background-color: #253144; /* Azul oscuro más intenso */
+    color: #d1e7fd; /* Azul claro */
+    border: 2px solid #90cdf4; /* Borde azul claro */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para hover (para cualquier cambio, como por ejemplo : el cambio del color)*/
+}
+.main-menu button:hover {
+    background-color: #90cdf4; /* Fondo azul claro */
+    color: #1e293b; /* Texto azul oscuro */
+}
+
+/*------------ Grid layout for the cards (creamos nuestras tarjetas) */
+.grid {
+    display: grid; /*RECUERDA: Esto activa el diseño en cuadricula*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*Divide el espacio en |columnas| adaptables.
+    Cada columna tiene un   |ancho |  mínimo de "250px".
+    auto-fit: ajusta el número de columnas según el ancho de la pantalla.
+    1fr permite que las columnas ocupen el espacio disponible.
+*/
+    gap: 1rem; /* Espaciado entre elementos */
+    padding: 1rem; /*Espacio interno*/
+    background-color: #253144; /* Azul más oscuro */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/*------------- Individual cards - estilizamos  :)  */
+.grid section {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e293b; /* Azul oscuro */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    color: #d1e7fd; /* Azul claro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar */
+}
+
+.grid section:hover {
+    transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba y si lo queremos hacia abajo solo debemos quitar el "-"*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más prominente */
+}
+
+/*--------------------Images within the cards- nuestros logos--*/
+.grid img {
+    max-width: 100%;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    border: 3px solid #90cdf4; /* Borde azul claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    margin-bottom: 0.5rem;
+}
+
+/*-----------Typography and details within cards */
+.grid h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #90cdf4; /* Azul claro */
+}
+
+.grid p { /*el contenido dentro de <p>*/
+    font-size: 0.9rem;
+    margin: 0.2rem 0 ;
+}
+
+.grid a {  /*sitio web*/
+    text-decoration: none;
+    font-weight: bold;
+    color: #8aa3b6; /* Azul claro */
+    transition: color 0.3s ease;
+}
+
+.grid a:hover { 
+    color: #ffffff; /* Cambia a blanco al pasar sobre "sitio web"*/
+}
+
+/*---------------Styling for the list view */
+.list {
+    display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
+    flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
+    gap: 1rem; /* Espaciado entre elementos */
+    padding: 1rem;
+    background-color: #253144; /* Azul más oscuro */
+    border-radius: 10px;
+}
+
+.list section {
+    display: flex;/* Flexbox para organizar los contenidos */
+    /*Esto permite que los elementos dentro de la tarjeta (por ejemplo, la imagen, el nombre,
+     la dirección) se alineen en una fila horizontal.*/
+    align-items: center;
+    gap: 1rem; /* Espaciado entre elementos */
+    padding: 1rem;
+    background-color: #1e293b; /* Azul oscuro */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    color: #d1e7fd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.list img {
+    max-width: 50px;
+    border-radius: 50%;
+    border: 2px solid #90cdf4;
+}
+
+.list h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #90cdf4;
+}
+
+.list p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #90cdf4;
+    transition: color 0.3s ease;
+}
+
+.list a:hover {
+    color: #ffffff;
+}
+
+/*-----footer + estilo -----------------------------------------*/
+  
+footer {
+    background-color:#b5cbe0; 
+    color:#1e293b  ; 
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: 6rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social, .footer-contact {
+    text-align: left;
+}
+
+.footer-social h3, .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1e293b; 
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-social .social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social .social-icons a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+}
+
+.footer-contact a {
+    color: #6b98b3; 
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    flex-basis: 100%;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #82878f;
+}

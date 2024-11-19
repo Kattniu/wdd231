@@ -1,0 +1,84 @@
+{
+    "members": [
+        {
+            "name": "Empresa 1",
+            "address": "123 Calle Principal",
+            "phone": "(+591) 123-4567",
+            "website": "https://empresa1.com",
+            "imageUrl": "images/empresa1-logo.webp"
+        },
+        {
+            "name": "Empresa 2",
+            "address": "456 Avenida Secundaria",
+            "phone": "(+591) 987-6543",
+            "website": "https://empresa2.com",
+            "imageUrl": "images/empresa2-logo.webp"
+        },
+        {
+            "name": "Tech Solutions Inc.",
+            "address": "123 Innovation Blvd, Cityville",
+            "phoneNumbers": "(123) 456-7890",
+            "website": "https://www.techsolutions.com",
+            "imageUrl": "images/techsolutions.png",
+            "membershipLevel": 3,
+            "description": "Leading provider of tech solutions for businesses."
+        },
+        {
+            "name": "EcoFriendly Goods",
+            "address": "456 Greenway Drive, Greentown",
+            "phoneNumbers": "(456) 789-0123",
+            "website": "https://www.ecofriendly.com",
+            "imageUrl": "images/ecofriendly.png",
+            "membershipLevel": 2,
+            "description": "Sustainable products for everyday life."
+        },
+        {
+            "name": "Empresa 2",
+            "address": "456 Avenida Secundaria",
+            "phone": "(+591) 987-6543",
+            "website": "https://empresa2.com",
+            "imageUrl": "images/empresa2-logo.webp"
+        },
+        {
+            "name": "Tech Solutions Inc.",
+            "address": "123 Innovation Blvd, Cityville",
+            "phoneNumbers": "(123) 456-7890",
+            "website": "https://www.techsolutions.com",
+            "imageUrl": "images/techsolutions.png",
+            "membershipLevel": 3,
+            "description": "Leading provider of tech solutions for businesses."
+        },
+        {
+            "name": "Empresa 2",
+            "address": "456 Avenida Secundaria",
+            "phone": "(+591) 987-6543",
+            "website": "https://empresa2.com",
+            "imageUrl": "images/empresa2-logo.webp"
+        },
+        {
+            "name": "Tech Solutions Inc.",
+            "address": "123 Innovation Blvd, Cityville",
+            "phoneNumbers": "(123) 456-7890",
+            "website": "https://www.techsolutions.com",
+            "imageUrl": "images/techsolutions.png",
+            "membershipLevel": 3,
+            "description": "Leading provider of tech solutions for businesses."
+        },
+        {
+            "name": "Empresa 2",
+            "address": "456 Avenida Secundaria",
+            "phone": "(+591) 987-6543",
+            "website": "https://empresa2.com",
+            "imageUrl": "images/empresa2-logo.webp"
+        },
+        {
+            "name": "Tech Solutions Inc.",
+            "address": "123 Innovation Blvd, Cityville",
+            "phoneNumbers": "(123) 456-7890",
+            "website": "https://www.techsolutions.com",
+            "imageUrl": "images/techsolutions.png",
+            "membershipLevel": 3,
+            "description": "Leading provider of tech solutions for businesses."
+        }
+    ]
+}
