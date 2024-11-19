@@ -1,84 +1,86 @@
 {
     "members": [
-        {
-            "name": "Empresa 1",
-            "address": "123 Calle Principal",
-            "phone": "(+591) 123-4567",
-            "website": "https://empresa1.com",
-            "imageUrl": "images/empresa1-logo.webp"
-        },
-        {
-            "name": "Empresa 2",
-            "address": "456 Avenida Secundaria",
-            "phone": "(+591) 987-6543",
-            "website": "https://empresa2.com",
-            "imageUrl": "images/empresa2-logo.webp"
-        },
-        {
-            "name": "Tech Solutions Inc.",
-            "address": "123 Innovation Blvd, Cityville",
-            "phoneNumbers": "(123) 456-7890",
-            "website": "https://www.techsolutions.com",
-            "imageUrl": "images/techsolutions.png",
-            "membershipLevel": 3,
-            "description": "Leading provider of tech solutions for businesses."
-        },
-        {
-            "name": "EcoFriendly Goods",
-            "address": "456 Greenway Drive, Greentown",
-            "phoneNumbers": "(456) 789-0123",
-            "website": "https://www.ecofriendly.com",
-            "imageUrl": "images/ecofriendly.png",
-            "membershipLevel": 2,
-            "description": "Sustainable products for everyday life."
-        },
-        {
-            "name": "Empresa 2",
-            "address": "456 Avenida Secundaria",
-            "phone": "(+591) 987-6543",
-            "website": "https://empresa2.com",
-            "imageUrl": "images/empresa2-logo.webp"
-        },
-        {
-            "name": "Tech Solutions Inc.",
-            "address": "123 Innovation Blvd, Cityville",
-            "phoneNumbers": "(123) 456-7890",
-            "website": "https://www.techsolutions.com",
-            "imageUrl": "images/techsolutions.png",
-            "membershipLevel": 3,
-            "description": "Leading provider of tech solutions for businesses."
-        },
-        {
-            "name": "Empresa 2",
-            "address": "456 Avenida Secundaria",
-            "phone": "(+591) 987-6543",
-            "website": "https://empresa2.com",
-            "imageUrl": "images/empresa2-logo.webp"
-        },
-        {
-            "name": "Tech Solutions Inc.",
-            "address": "123 Innovation Blvd, Cityville",
-            "phoneNumbers": "(123) 456-7890",
-            "website": "https://www.techsolutions.com",
-            "imageUrl": "images/techsolutions.png",
-            "membershipLevel": 3,
-            "description": "Leading provider of tech solutions for businesses."
-        },
-        {
-            "name": "Empresa 2",
-            "address": "456 Avenida Secundaria",
-            "phone": "(+591) 987-6543",
-            "website": "https://empresa2.com",
-            "imageUrl": "images/empresa2-logo.webp"
-        },
-        {
-            "name": "Tech Solutions Inc.",
-            "address": "123 Innovation Blvd, Cityville",
-            "phoneNumbers": "(123) 456-7890",
-            "website": "https://www.techsolutions.com",
-            "imageUrl": "images/techsolutions.png",
-            "membershipLevel": 3,
-            "description": "Leading provider of tech solutions for businesses."
-        }
-    ]
+    {
+        "name": "EcoPeru Sustainability",
+        "address": "Av. Las Flores 102, Miraflores, Lima",
+        "phone": "(+51) 01-789-4561",
+        "website": "https://ecoperusustainability.com",
+        "imageUrl": "images/planta.png",
+        "membershipLevel": 2,
+        "description": "Promoting sustainable practices for a greener future in Peru."
+    },
+    {
+        "name": "PeruTech Innovators",
+        "address": "Calle Los Pinos 289, San Isidro, Lima",
+        "phone": "(+51) 01-445-1234",
+        "website": "https://perutechinnovators.com",
+        "imageUrl": "images/peru1.png",
+        "membershipLevel": 2,
+        "description": "Leaders in technology solutions for businesses in Peru."
+    },
+    {
+        "name": "EcoPeru",
+        "address": "Av. Las Flores 102, Miraflores, Lima",
+        "phone": "(+51) 01-789-4561",
+        "website": "https://ecoperusustainable.com",
+        "imageUrl": "images/foco.png",
+        "membershipLevel": 1,
+        "description": "Promoting sustainable practices for a greener future in Peru."
+    },
+    {
+        "name": "Andes Exporters Group",
+        "address": "Av. República de Panamá 3420, San Borja, Lima",
+        "phone": "(+51) 01-456-7788",
+        "website": "https://andesexportersgroup.com",
+        "imageUrl": "images/andes.png",
+        "membershipLevel": 3,
+        "description": "Supporting Andean exporters to thrive in global markets."
+    },
+    {
+        "name": "Lima Business Connect",
+        "address": "Jr. El Comercio 567, Cercado de Lima, Lima",
+        "phone": "(+51) 01-998-8877",
+        "website": "https://limabusinessconnect.com",
+        "imageUrl": "images/logo3.png",
+        "membershipLevel": 3,
+        "description": "Connecting businesses in Lima through networking and collaboration."
+    },
+    {
+        "name": "Lima Learning Hub",
+        "address": "Calle Educación 321, San Isidro, Lima",
+        "phone": "(+51) 01-654-9876",
+        "website": "https://limalearninghub.com",
+        "imageUrl": "images/libro.png",
+        "membershipLevel": 1,
+        "description": "A center dedicated to professional development and education in Lima."
+    },
+    {
+        "name": "Taste of Peru Foods",
+        "address": "Av. Gastronomía 45, Surco, Lima",
+        "phone": "(+51) 01-987-6543",
+        "website": "https://tasteofperu.com",
+        "imageUrl": "images/comida.png",
+        "membershipLevel": 2,
+        "description": "Showcasing Peru's rich culinary traditions to the world."
+    },
+    {
+        "name": "Discover Lima Tours",
+        "address": "Av. Turismo 890, Miraflores, Lima",
+        "phone": "(+51) 01-998-1122",
+        "website": "https://discoverlimatours.com",
+        "imageUrl": "images/tecnologia.png",
+        "membershipLevel": 3,
+        "description": "Providing unique and immersive travel experiences in Lima."
+    },
+    {
+        "name": "Real Estate Lima",
+        "address": "Jr. Bienes Raíces 567, Cercado de Lima, Lima",
+        "phone": "(+51) 01-777-8899",
+        "website": "https://realestatelima.com",
+        "imageUrl": "images/logo3.png",
+        "membershipLevel": 2,
+        "description": "Helping families and businesses find the perfect properties in Lima."
+    }
+]
+
 }

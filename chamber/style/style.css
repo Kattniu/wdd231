@@ -198,7 +198,7 @@ main {
     display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
     flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
     gap: 1rem; /* Espaciado entre elementos */
-    padding: 1rem;
+    padding: 3rem;
     background-color: #253144; /* Azul más oscuro */
     border-radius: 10px;
 }
@@ -208,6 +208,7 @@ main {
     /*Esto permite que los elementos dentro de la tarjeta (por ejemplo, la imagen, el nombre,
      la dirección) se alineen en una fila horizontal.*/
     align-items: center;
+    justify-content: space-between;
     gap: 1rem; /* Espaciado entre elementos */
     padding: 1rem;
     background-color: #1e293b; /* Azul oscuro */
@@ -224,6 +225,7 @@ main {
 
 .list img {
     max-width: 50px;
+    height: auto;
     border-radius: 50%;
     border: 2px solid #90cdf4;
 }
