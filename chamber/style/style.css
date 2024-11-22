@@ -4,13 +4,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: black;
-    color: #b5cbe0;
   }
 
 /*--header----------logo y h1-------------------------*/
 header {
     background-color: #1e293b; /* Azul oscuro */
-    color: #ffffff; /* Texto blanco */
     padding: 1rem 2rem; /* Espaciado interno arriba/abajo (1rem) y a los lados (2rem) */
 }
 .header-container {
@@ -163,7 +161,7 @@ main {
 
 /*--------------------Images within the cards- nuestros logos--*/
 .grid img {
-    max-width: 100%;
+    max-width: 60%;
     border-radius: 50%; /* Hace que la imagen sea circular */
     border: 3px solid #90cdf4; /* Borde azul claro */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */

@@ -1,5 +1,3 @@
-
-document.getElementById("year").textContent = new Date().getFullYear();
 const hamburger = document.querySelector('#menu');
 const naviMenu = document.querySelector('.navigation');
 
@@ -39,8 +37,8 @@ const displayMembers = (members) => {
         portrait.setAttribute("src", member.imageUrl);
         portrait.setAttribute("alt", `Logo de ${member.name}`);
         portrait.setAttribute("loading", "lazy");
-        portrait.setAttribute("width", "150");
-        portrait.setAttribute("height", "150");
+        portrait.setAttribute("width", "100");
+        portrait.setAttribute("height", "100");
         address.textContent = member.address;
         phoneNumber.textContent = member.phone;
         website.setAttribute("href", member.website);

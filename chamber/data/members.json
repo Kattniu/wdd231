@@ -71,15 +71,6 @@
         "imageUrl": "images/tecnologia.png",
         "membershipLevel": 3,
         "description": "Providing unique and immersive travel experiences in Lima."
-    },
-    {
-        "name": "Real Estate Lima",
-        "address": "Jr. Bienes Raíces 567, Cercado de Lima, Lima",
-        "phone": "(+51) 01-777-8899",
-        "website": "https://realestatelima.com",
-        "imageUrl": "images/logo3.png",
-        "membershipLevel": 2,
-        "description": "Helping families and businesses find the perfect properties in Lima."
     }
 ]
 
