@@ -3,7 +3,7 @@
       padding: 2rem 0;
     }
     #menu {
-		display: none; /* hide hamburger button */
+		display: none;
 	}
 	.navigation {
 		flex-direction: row;
@@ -13,6 +13,18 @@
 		display: block;
 		flex: 1 1 100%;
 	}
-
+	
+	.event-weather-container {
+			grid-template-columns: 1fr 1fr 1fr; /* Tres columnas en pantallas grandes */
+		}
+	
+	.hero-text {
+			bottom: 40%;
+			left: 20%;
+		}
+	
+	.cta-button {
+			font-size: 1.4rem;
+		}
   }
   

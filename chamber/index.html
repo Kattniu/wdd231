@@ -13,7 +13,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-large.css">
-    <script src="script/script.js" defer></script>
+    <script src="script/index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
@@ -30,27 +30,68 @@
             <nav class="navigation">
                 <button aria-label="toggle menu" type="button" id="menu"></button>
                 <div class="menu-links">
-                    <a href="index.html">Home</a>
-                    <a href="directory.html" class="active">Directory</a>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="directory.html">Directory</a>
                     <a href="#">Join</a>
                     <a href="#">Discover</a>
                 </div>
             </nav>
         </div>
-    </header>    
-
-
-    <main>
-        <div class="main-menu">
-            <button id="grid">⏹️Grid</button>
-            <button id="list">📄List</button>
+    </header>
+   
+<main class="main-index">  
+    <section class="hero">
+        <img src="images/lima.jpg" alt="Hero Image" class="hero-img">
+        <div class="hero-text">
+          <a href="#" class="cta-button">Join Us</a>
         </div>
-        <hr>
+      </section>
 
-        <div id="cards" class="grid"></div>
-    </main>
+      <h1>Home</h1>
+      <Section class="event-weather-container">
+        <section class="events">
+          <h2>Events</h2>
+          <div id="events-placeholder">
+              <p>No events available at the moment.</p>
+          </div>
+        </section>
+  
+        <section class="weather">
+            <div class="current-weather">
+              <h2>Current Weather</h2>
+                <div class="weather-info">
+                    <p id="temp">--°F</p>
+                    <p id="weather-description">Loading...</p>
+                    <ul>
+                        <li><strong>High:</strong> <span id="high">--°F</span></li>
+                        <li><strong>Low:</strong> <span id="low">--°F</span></li>
+                        <li><strong>Humidity:</strong> <span id="humidity">--%</span></li>
+                        <li><strong>Sunrise:</strong> <span id="sunrise">--:-- AM</span></li>
+                        <li><strong>Sunset:</strong> <span id="sunset">--:-- PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+          <div class="weather-forecast">
+            <h2>Weather Forecast</h2>
+            <ul>
+                <li>Today: <span id="forecast-today">--°F</span></li>
+                <li>Tomorrow: <span id="forecast-wed">--°F</span></li>
+                <li>After Tomorrow: <span id="forecast-thu">--°F</span></li>
+            </ul>
+          </div>
+        </section>
+
+      </Section>
+      <section id="members-container" class="grid-view">
+      </section>
+
+</main>
+
+ 
     
-    <footer>
+<footer>
     <div class="footer-container">
         <div class="footer-social">
             <h3>Follow Us</h3>
