@@ -1,43 +1,37 @@
-// Seleccionamos los elementos HTML donde mostraremos la información
-const currentTemp = document.querySelector('#temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const weatherDescription = document.querySelector('#weather-description');
-const highTemp = document.querySelector('#high');
-const lowTemp = document.querySelector('#low');
-const humidity = document.querySelector('#humidity');
-const sunrise = document.querySelector('#sunrise');
-const sunset = document.querySelector('#sunset');
+// Reemplaza con tu propia clave API de OpenWeatherMap
+const apiKey = 'e5a516cddfb0278ec648b96bc8a0bdb9';
+const city = 'Lima,pe';  // Cambia Lima,pe por la ciudad que quieras
 
-// API Key de OpenWeatherMap (reemplaza con tu propia clave)
-const apiKey = 'ce72cb2ea83074df0f14d8453f900107';
-const lat = '12.0464';  // Lima, Perú (latitud)
-const lon = '-77.0428'; // Lima, Perú (longitud)
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+// URLs para obtener la información del clima
+const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
-// Función para obtener y mostrar los datos del clima
-async function getWeatherData() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        
-        // Mostrar los datos en los elementos HTML
-        currentTemp.textContent = `${Math.round(data.main.temp)}°C`;
-        weatherDescription.textContent = data.weather[0].description;
-        highTemp.textContent = `${Math.round(data.main.temp_max)}°C`;
-        lowTemp.textContent = `${Math.round(data.main.temp_min)}°C`;
-        humidity.textContent = `${data.main.humidity}%`;
-        sunrise.textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
-        sunset.textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
-        
-        // Establecer el icono del clima
-        const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        weatherIcon.setAttribute('src', iconSrc);
-        weatherIcon.setAttribute('alt', data.weather[0].description);
-        
-    } catch (error) {
-        console.error('Error fetching weather data:', error);
-    }
+window.addEventListener('DOMContentLoaded', function() {
+    // Obtener el clima actual
+    fetch(currentWeatherUrl)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('temp').textContent = `${Math.round(data.main.temp)}°C`;
+            document.getElementById('weather-description').textContent = capitalizeWeather(data.weather[0].description);
+            document.getElementById('high').textContent = `${Math.round(data.main.temp_max)}°C`;
+            document.getElementById('low').textContent = `${Math.round(data.main.temp_min)}°C`;
+            document.getElementById('humidity').textContent = `${data.main.humidity}%`;
+            document.getElementById('sunrise').textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+            document.getElementById('sunset').textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+            document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        });
+
+    // Obtener la previsión del clima para 3 días
+    fetch(forecastUrl)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('forecast-today').textContent = `${Math.round(data.list[0].main.temp)}°C`;
+            document.getElementById('forecast-wed').textContent = `${Math.round(data.list[8].main.temp)}°C`; // 24 horas después
+            document.getElementById('forecast-thu').textContent = `${Math.round(data.list[16].main.temp)}°C`; // 48 horas después
+        });
+});
+
+// Capitalizar la descripción del clima
+function capitalizeWeather(description) {
+    return description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
-
-// Llamar a la función para obtener los datos del clima
-getWeatherData();
