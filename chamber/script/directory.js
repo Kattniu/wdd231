@@ -1,10 +1,11 @@
-const hamburger = document.querySelector('#menu');
-const naviMenu = document.querySelector('.navigation');
+const hamburger = document.querySelector('#myButton');
+const navElemeent = document.querySelector('#animateme');
 
 hamburger.addEventListener('click', () => {
-	naviMenu.classList.toggle('open');
-	hamburger.classList.toggle('open');
-});
+    navElemeent.classList.toggle('open');
+    hamburger.classList.toggle('open');
+})
+
 
 const url = 'data/members.json'; // Ruta al archivo JSON
 const display = document.querySelector("#cards"); // Contenedor donde se mostrarán las tarjetas
@@ -56,20 +57,29 @@ const displayMembers = (members) => {
         display.appendChild(card);
     });
 };
-// Cambiar entre vistas de grid y lista
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
+// Asegúrate de que el código se ejecute solo cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtener los botones y el contenedor de tarjetas
+    const gridbutton = document.querySelector("#grid");
+    const listbutton = document.querySelector("#list");
+    const display = document.querySelector("#cards"); // Contenedor de tarjetas
 
+    // Verificar que los botones y el contenedor existan
+    if (gridbutton && listbutton && display) {
+        // Cambiar entre vistas de grid y lista
+        gridbutton.addEventListener("click", () => {
+            display.classList.add("grid");
+            display.classList.remove("list");
+        });
 
-gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
+        listbutton.addEventListener("click", () => {
+            display.classList.add("list");
+            display.classList.remove("grid");
+        });
+    } else {
+        console.error("No se encontraron los elementos necesarios: botones o contenedor de tarjetas.");
+    }
+
+    // Llamar a la función para cargar los datos al cargar la página
+    getMembersData(url);
 });
-
-listbutton.addEventListener("click", () => {
-    display.classList.add("list");
-    display.classList.remove("grid");
-});
-
-// Llamar a la función para cargar los datos al cargar la página
-getMembersData(url);

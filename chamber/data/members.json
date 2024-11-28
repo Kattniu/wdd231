@@ -5,7 +5,7 @@
         "address": "Av. Las Flores 102, Miraflores, Lima",
         "phone": "(+51) 01-789-4561",
         "website": "https://ecoperusustainability.com",
-        "imageUrl": "images/planta.png",
+        "imageUrl": "images/planta.webp",
         "membershipLevel": 2,
         "description": "Promoting sustainable practices for a greener future in Peru."
     },
@@ -14,7 +14,7 @@
         "address": "Calle Los Pinos 289, San Isidro, Lima",
         "phone": "(+51) 01-445-1234",
         "website": "https://perutechinnovators.com",
-        "imageUrl": "images/peru1.png",
+        "imageUrl": "images/robot.webp",
         "membershipLevel": 2,
         "description": "Leaders in technology solutions for businesses in Peru."
     },
@@ -23,7 +23,7 @@
         "address": "Av. Las Flores 102, Miraflores, Lima",
         "phone": "(+51) 01-789-4561",
         "website": "https://ecoperusustainable.com",
-        "imageUrl": "images/foco.png",
+        "imageUrl": "images/foco.jpg",
         "membershipLevel": 1,
         "description": "Promoting sustainable practices for a greener future in Peru."
     },
@@ -32,7 +32,7 @@
         "address": "Av. República de Panamá 3420, San Borja, Lima",
         "phone": "(+51) 01-456-7788",
         "website": "https://andesexportersgroup.com",
-        "imageUrl": "images/andes.png",
+        "imageUrl": "images/tecnologia.webp",
         "membershipLevel": 3,
         "description": "Supporting Andean exporters to thrive in global markets."
     },
@@ -41,7 +41,7 @@
         "address": "Jr. El Comercio 567, Cercado de Lima, Lima",
         "phone": "(+51) 01-998-8877",
         "website": "https://limabusinessconnect.com",
-        "imageUrl": "images/logo3.png",
+        "imageUrl": "images/logo3.webp",
         "membershipLevel": 3,
         "description": "Connecting businesses in Lima through networking and collaboration."
     },
@@ -50,7 +50,7 @@
         "address": "Calle Educación 321, San Isidro, Lima",
         "phone": "(+51) 01-654-9876",
         "website": "https://limalearninghub.com",
-        "imageUrl": "images/libro.png",
+        "imageUrl": "images/libro.webp",
         "membershipLevel": 1,
         "description": "A center dedicated to professional development and education in Lima."
     },
@@ -59,7 +59,7 @@
         "address": "Av. Gastronomía 45, Surco, Lima",
         "phone": "(+51) 01-987-6543",
         "website": "https://tasteofperu.com",
-        "imageUrl": "images/comida.png",
+        "imageUrl": "images/comida.webp",
         "membershipLevel": 2,
         "description": "Showcasing Peru's rich culinary traditions to the world."
     },
@@ -68,7 +68,7 @@
         "address": "Av. Turismo 890, Miraflores, Lima",
         "phone": "(+51) 01-998-1122",
         "website": "https://discoverlimatours.com",
-        "imageUrl": "images/tecnologia.png",
+        "imageUrl": "images/peru3.jpg",
         "membershipLevel": 3,
         "description": "Providing unique and immersive travel experiences in Lima."
     }

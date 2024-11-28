@@ -6,98 +6,97 @@ body {
     background-color: black;
   }
 
-/*--header----------logo y h1-------------------------*/
+/*------------- Header --------------------------*/
+/* General Header Styles */
 header {
     background-color: #1e293b; /* Azul oscuro */
-    padding: 1rem 2rem; /* Espaciado interno arriba/abajo (1rem) y a los lados (2rem) */
-}
-.header-container {
-    display: flex; /* Alinea elementos en fila */
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
-    flex-wrap: nowrap; /* Evita que los elementos salten a una nueva fila */
-    max-width: 1200px; /* Limita el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    display: flex; /* Alinear elementos en una fila */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: space-between; /* Espacio entre logo, h1, y menú */
+    padding: 1rem 2rem; /* Espaciado interno */
+    gap: 1rem; /* Espaciado entre elementos */
 }
 
-.logo img {
-    max-width: 80px; /* El ancho máximo de la imagen es 80px */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+header img.logo {
+    max-width: 80px; /* Tamaño de mi logo */
+    height: auto;
 }
+
 header h1 {
-    font-size: 2rem; /* Tamaño de fuente del título */
-    font-weight: bold; /* Hace que el texto sea más grueso */
-    margin: 0; /* Elimina el margen alrededor del título */
     color: #d1e7fd; /* Azul claro */
+    font-weight: bold;
+    font-size: 1.8rem; /* Tamaño del texto */
+    margin: 0; /* Eliminar márgenes */
+    flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
+    text-align: left; /* Centrar el texto del título */
 }
 
-.navigation {
-    display: flex; /* Alinea los elementos del menú en una fila */
-    align-items: center; /* Centra verticalmente los elementos del menú */
-    position: relative; /* Permite posicionar elementos hijos de forma relativa */
+header nav {
+    position: relative;
 }
 
-/*------boton del menu (hamburguesa)------*/
-#menu {
-    font-size: 1rem; /* Tamaño del ícono del menú */
-    background: none; /* Elimina el fondo del botón */
-    border: none; /* Elimina el borde del botón */
-    color: white; /* Cambia el color del ícono a blanco */
-    cursor: pointer; /* Cambia el cursor al estilo de "clic" */
+/*------ Botón del menú hamburguesa */
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 1rem;
 }
 
-#menu::before {
-	content: "☰";
+#myButton::before {
+    content: "\2630"; /* Ícono de menú hamburguesa */
 }
 
-#menu.open::before {
-	content: "✖️";
+#myButton.open::before {
+    content: "✖️"; /* Ícono de cerrar */
 }
 
-/*------------Estilo de los enlaces (dentro del menu)------*/
-
-.menu-links{ 
-    display: flex; /*Alinea los enlaces en una fila */
-    gap: 1rem; /*Los espacios entre los enlaces*/
+/*----Links del menu */
+ul.menuLinks {
+    list-style-type: none;
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del header */
+    right: 0; /* Alineado al borde derecho */
+    background-color: #1d2532; /* Fondo azul oscuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    z-index: 1000; /* Asegura que se superponga */
 }
-.menu-links a{
+
+
+ul.menuLinks a {
+    display: block; /* Cada enlace en una nueva línea */
+    color: aliceblue; /* Blanco */
     text-decoration: none;
-    color: aliceblue;
-    font-weight: bold;/*Los enlaces se vuelven "negrita"*/
-    transition: color 0.3s ease;/*agregar una transicion suave cuando cambia de color*/
-
-}
-.menu-links a:hover {
-    color: #90cdf4; /* Cambia el color al pasar el ratón a azul claro */
-    background-color:#253144 ;
-    border-radius: 10px;
-}
-.menu-links .active {
-    border-bottom: 2px solid #90cdf4; /* Añade una línea debajo del enlace activo */
-}
-.navigation.open .menu-links {
-    display: block; /* Muestra el menú en bloque */
-    background-color: #1e293b; /* Fondo azul oscuro */
-    padding: 1rem; /* Espaciado interno */
-    box-shadow: 0 4px 6px rgba(213, 200, 200, 0.2); /* Sombra para destacar el menú */
-    z-index: 10; /* Lo coloca encima de otros elementos */
-}
-.navigation a {
-	display: none;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: none;
-	color:aliceblue;
+    padding: 1rem 2rem;
+    font-weight: bold; /* Negrita */
+    border-radius: 4px; /* Bordes suaves */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
-.open a {
-	display: block;
+ul.menuLinks a:hover {
+    color: #acdfff; /* Azul claro */
+    background-color: #e4753a; 
+}
+
+
+/* Cuando el menú está abierto */
+#animateme.open .menuLinks {
+    display: block; /* Muestra el menú */
+}
+
+/* Activo (subrayado en el enlace actual) */
+.menuLinks .active {
+    border-bottom: 2px solid #90cdf4;
 }
 
 /*------------Main--------------------------------*/
 /* General styling for the main container */
-main {
+main{
     margin: 20px auto; /* Centra el main horizontalmente, crea espacio externo de 20px abajo y arriba, y auto lo centra   */
     max-width: 1200px; /* Define un ancho máximo, para que no ocupe todo el ancho de la pantalla */
     padding: 1rem; /*Agregar espacio interno uniforme alrededor del contenido*/
@@ -342,7 +341,7 @@ footer {
 }
 
 .cta-button {
-    background-color: #ff7f50;
+    background-color:#e0713c;
     color: white;
     padding: 15px 30px;
     font-size: 1.5rem;
@@ -353,21 +352,21 @@ footer {
 }
 
 .cta-button:hover {
-    background-color: #e0713c;
+    background-color: #509cff;
 }
 
 /* Main Container */
 main {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
+    margin: 0;
 }
 
 /* Content Container for Weather and Events */
 .event-weather-container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column on small screens */
-    gap: 30px;
+    grid-template-columns:1fr;
+    gap: 50px;
+    padding: 10px;
     margin-top: 40px;
 }
 
@@ -378,4 +377,3 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-

@@ -14,81 +14,78 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-large.css">
     <script src="script/index.js" defer></script>
+    <script src="script/directory.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
     <title>Chamber Directory</title>
 </head>
-
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo-top.webp" loading="lazy" alt="logo chamber of commerce" width="80" height="100">
-            </div>
-            <h1>Chamber of Commerce of Peru</h1>
-            <nav class="navigation">
-                <button aria-label="toggle menu" type="button" id="menu"></button>
-                <div class="menu-links">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="directory.html">Directory</a>
-                    <a href="#">Join</a>
-                    <a href="#">Discover</a>
-                </div>
-            </nav>
-        </div>
+        <img src="images/logo-top.webp" class="logo" loading="lazy" alt="Logo chamber of commerce"  width="80" height="100">
+        <h1>Chamber of Commerce - Peru</h1>
+        <nav id="animateme">
+            <button id="myButton" aria-label="Open navidation menu"></button>
+        <ul class="menuLinks">
+            <li><a class="active" href="index.html" title="home">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#" title="history">Join</a></li>
+            <li><a href="#" title="about us">Discover</a></li>
+        </ul>
+        </nav>
     </header>
-   
-<main class="main-index">  
-    <section class="hero">
-        <img src="images/lima.jpg" alt="Hero Image" class="hero-img">
-        <div class="hero-text">
-          <a href="#" class="cta-button">Join Us</a>
-        </div>
-      </section>
+
+    <main class="main-index">  
+        <section class="hero">
+            <img src="images/lima.jpg" alt="Hero Image" class="hero-img">
+            <div class="hero-text">
+            <a href="#" class="cta-button">Join Us</a>
+            </div>
+        </section>
 
       <h1>Home</h1>
-      <Section class="event-weather-container">
-        <section class="events">
-          <h2>Events</h2>
-          <div id="events-placeholder">
-              <p>No events available at the moment.</p>
-          </div>
-        </section>
+        <section class="event-weather-container">
 
-        <section class="weather">
-            <div class="current-weather">
-                <h2>Current Weather</h2>
-                <div class="weather-info">
-                    <!-- Estos elementos se actualizarán con JavaScript -->
-                    <p id="temp">--°C</p>
-                    <p id="weather-description">Loading...</p>
-                    <ul>
-                        <li><strong>High:</strong> <span id="high">--°C</span></li>
-                        <li><strong>Low:</strong> <span id="low">--°C</span></li>
-                        <li><strong>Humidity:</strong> <span id="humidity">--%</span></li>
-                        <li><strong>Sunrise:</strong> <span id="sunrise">--:-- AM</span></li>
-                        <li><strong>Sunset:</strong> <span id="sunset">--:-- PM</span></li>
-                    </ul>
-                </div>
+            <section class="events">
+            <h2>Events</h2>
+            <div id="events-placeholder">
+                <p>No events available at the moment.</p>
             </div>
-        </section>
-        
-  
-        <section>
-          <div class="weather-forecast">
-            <h2>Weather Forecast</h2>
-            <ul>
-                <li>Today: <span id="forecast-today">--°F</span></li>
-                <li>Tomorrow: <span id="forecast-wed">--°F</span></li>
-                <li>After Tomorrow: <span id="forecast-thu">--°F</span></li>
-            </ul>
-          </div>
-        </section>
+            </section>
 
-      </Section>
-      <section id="members-container" class="grid-view">
+            <section class="weather">
+                <div class="current-weather">
+                    <h2>Current Weather</h2>
+                    <img id="weather-icon" alt="Weather Icon">
+                        <div class="weather-info">
+                            <!-- Estos elementos se actualizarán con JavaScript -->
+                            <p id="temp">--°C</p>
+                            <p id="weather-description">Loading...</p>
+                            <ul>
+                                <li><strong>High:</strong> <span id="high">--°C</span></li>
+                                <li><strong>Low:</strong> <span id="low">--°C</span></li>
+                                <li><strong>Humidity:</strong> <span id="humidity">--%</span></li>
+                                <li><strong>Sunrise:</strong> <span id="sunrise">--:-- AM</span></li>
+                                <li><strong>Sunset:</strong> <span id="sunset">--:-- PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+                
+            <section>
+            <div class="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <ul>
+                    <li>Today: <span id="forecast-today">--°F</span></li>
+                    <li>Tomorrow: <span id="forecast-wed">--°F</span></li>
+                    <li>After Tomorrow: <span id="forecast-thu">--°F</span></li>
+                </ul>
+            </div>
+            </section>
+
       </section>
+
+            <section id="members-container" class="grid-view"></section>
 
 </main>
 

@@ -1,30 +1,28 @@
-@media (min-width: 768px) {
-    header {
-      padding: 2rem 0;
-    }
-    #menu {
-		display: none;
-	}
-	.navigation {
-		flex-direction: row;
-	}
 
-	.navigation a {
-		display: block;
-		flex: 1 1 100%;
-	}
-	
-	.event-weather-container {
-			grid-template-columns: 1fr 1fr 1fr; /* Tres columnas en pantallas grandes */
-		}
-	
-	.hero-text {
-			bottom: 40%;
-			left: 20%;
-		}
-	
-	.cta-button {
-			font-size: 1.4rem;
-		}
-  }
-  
+/* Responsive ajustes */
+@media (min-width: 768px) {
+    ul.menuLinks  {
+        display: flex; /* Muestra el menú en línea para pantallas más grandes */
+        flex-direction: row;
+        position: static; /* Restaura el flujo normal del diseño */
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #myButton {
+        display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+    }
+    main {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .event-weather-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 50px;
+        margin-top: 40px;
+    }
+        
+
+}

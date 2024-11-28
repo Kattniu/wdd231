@@ -1,37 +1,64 @@
-// Reemplaza con tu propia clave API de OpenWeatherMap
-const apiKey = 'e5a516cddfb0278ec648b96bc8a0bdb9';
-const city = 'Lima,pe';  // Cambia Lima,pe por la ciudad que quieras
+document.addEventListener('DOMContentLoaded', () => {
+    const apiKey = '0168a77735eeede59954db08c72d85e4'; // Mi clave API
+    const lat = -12.046220175129653; // Coordenadas de Lima
+    const lon = -77.04330652780341;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
-// URLs para obtener la información del clima
-const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
-
-window.addEventListener('DOMContentLoaded', function() {
-    // Obtener el clima actual
+    // Obtener clima actual
     fetch(currentWeatherUrl)
         .then(response => response.json())
-        .then(data => {
-            document.getElementById('temp').textContent = `${Math.round(data.main.temp)}°C`;
-            document.getElementById('weather-description').textContent = capitalizeWeather(data.weather[0].description);
-            document.getElementById('high').textContent = `${Math.round(data.main.temp_max)}°C`;
-            document.getElementById('low').textContent = `${Math.round(data.main.temp_min)}°C`;
-            document.getElementById('humidity').textContent = `${data.main.humidity}%`;
-            document.getElementById('sunrise').textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
-            document.getElementById('sunset').textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
-            document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        .then(updateCurrentWeather)
+        .catch(error => {
+            console.error('Error al obtener el clima actual:', error);
+            document.getElementById('weather-description').textContent = 'Error al cargar el clima';
         });
 
-    // Obtener la previsión del clima para 3 días
+    // Obtener pronóstico
     fetch(forecastUrl)
         .then(response => response.json())
-        .then(data => {
-            document.getElementById('forecast-today').textContent = `${Math.round(data.list[0].main.temp)}°C`;
-            document.getElementById('forecast-wed').textContent = `${Math.round(data.list[8].main.temp)}°C`; // 24 horas después
-            document.getElementById('forecast-thu').textContent = `${Math.round(data.list[16].main.temp)}°C`; // 48 horas después
+        .then(updateForecast)
+        .catch(error => {
+            console.error('Error al obtener el pronóstico del clima:', error);
         });
 });
 
+// Actualizar datos del clima actual
+function updateCurrentWeather(data) {
+    const iconElement = document.getElementById('weather-icon');
+    const temperatureElement = document.getElementById('temp');
+    const conditionElement = document.getElementById('weather-description');
+    const highElement = document.getElementById('high');
+    const lowElement = document.getElementById('low');
+    const humidityElement = document.getElementById('humidity');
+    const sunriseElement = document.getElementById('sunrise');
+    const sunsetElement = document.getElementById('sunset');
+
+    iconElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
+    conditionElement.textContent = capitalizeWeather(data.weather[0].description);
+    highElement.textContent = `${Math.round(data.main.temp_max)}°C`;
+    lowElement.textContent = `${Math.round(data.main.temp_min)}°C`;
+    humidityElement.textContent = `${data.main.humidity}%`;
+    sunriseElement.textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+    sunsetElement.textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+}
+
+// Actualizar pronóstico del clima
+function updateForecast(data) {
+    const todayElement = document.getElementById('forecast-today');
+    const tomorrowElement = document.getElementById('forecast-wed');
+    const afterTomorrowElement = document.getElementById('forecast-thu');
+
+    todayElement.textContent = `${Math.round(data.list[0].main.temp)}°C`;
+    tomorrowElement.textContent = `${Math.round(data.list[8].main.temp)}°C`; // Pronóstico para mañana (8 intervalos de 3 horas)
+    afterTomorrowElement.textContent = `${Math.round(data.list[16].main.temp)}°C`; // Pasado mañana
+}
+
 // Capitalizar la descripción del clima
 function capitalizeWeather(description) {
-    return description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    return description
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
 }

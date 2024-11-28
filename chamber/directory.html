@@ -13,7 +13,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-large.css">
-    <script src="script/script.js" defer></script>
+    <script src="script/directory.js" defer></script>
+    <script src="script/index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
@@ -22,31 +23,25 @@
 
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo-top.webp" loading="lazy" alt="logo chamber of commerce" width="80" height="100">
-            </div>
-            <h1>Chamber of Commerce of Peru</h1>
-            <nav class="navigation">
-                <button aria-label="toggle menu" type="button" id="menu"></button>
-                <div class="menu-links">
-                    <a href="index.html">Home</a>
-                    <a href="directory.html" class="active">Directory</a>
-                    <a href="#">Join</a>
-                    <a href="#">Discover</a>
-                </div>
-            </nav>
-        </div>
-    </header>    
-
+        <img src="images/logo-top.webp" class="logo" loading="lazy" alt="Logo chamber of commerce"  width="80" height="100">
+        <h1>Chamber of Commerce - Peru</h1>
+    <nav id="animateme">
+    <button id="myButton"></button>
+    <ul class="menuLinks">
+        <li><a href="index.html" title="home">Home</a></li>
+        <li><a class="active" href="directory.html">Directory</a></li>
+        <li><a href="#" title="history">Join</a></li>
+        <li><a href="#" title="about us">Discover</a></li>
+    </ul> 
+    </nav>
+</header>
 
     <main>
         <div class="main-menu">
-            <button id="grid">⏹️Grid</button>
-            <button id="list">📄List</button>
+            <button id="grid" aria-label="Mostrar en vista de cuadrícula">⏹️Grid</button>
+            <button id="list" aria-label="Mostrar en vista de lista">📄List</button>
         </div>
         <hr>
-
         <div id="cards" class="grid"></div>
     </main>
     
