@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="CHAMBER JOIN PAGE">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Page to Join">
+    <meta property="og:image" content="image/io.jpg">
+    <meta property="og:url" content="https://kattniu.github.io/wdd231/"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page to Join">
+    <meta name="author" content="Katherine Gonzales">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style-large.css">
+    <script src="script/directory.js" defer></script>
+    <script src="script/join.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+f
+<body>
+<header>
+        <img src="images/logo-top.webp" class="logo" loading="lazy" alt="Logo chamber of commerce"  width="80" height="100">
+        <h1>Chamber of Commerce - Peru</h1>
+    <nav id="animateme">
+    <button id="myButton" aria-label="Open navidation menu"></button>
+    <ul class="menuLinks">
+        <li><a href="index.html" title="home">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a class="active" href="join.html" title="Join">Join</a></li>
+        <li><a href="#" title="Discover">Discover</a></li>
+    </ul> 
+    </nav>
+</header>
+<main class="join-main">
+    <section class="form-section">
+        <h2>Join Our Chamber</h2>
+        <form method="GET" action="thankyou.html">
+            <label for="first-name">
+                First Name:
+                <input type="text" id="first-name" name="first_name" required autocomplete="given-name" title="Enter your first name">
+            </label>
+
+            <label for="last-name">
+                Last Name:
+                <input type="text" id="last-name" name="last_name" required autocomplete="family-name" title="Enter your last name">
+            </label>
+
+            <label for="org-title">
+                Organizational Title:
+                <input type="text" id="org-title" name="organization_title" autocomplete="organization-title" title="Enter your organizational title" pattern="[A-Za-z\s-]{7,}" required>
+            </label>
+
+            <label for="email">
+                Email:
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Enter your email address">
+            </label>
+
+            <label for="phone">
+                Mobile Phone:
+                <input type="tel" id="phone" name="mobile_phone" required autocomplete="tel" title="Enter your mobile phone number">
+            </label>
+
+            <label for="business-name">
+                Business/Organization Name:
+                <input type="text" id="business-name" name="business_name" required autocomplete="organization" title="Enter your business/organization name">
+            </label>
+
+            <label for="membership-level">
+                Membership Level:
+                <select id="membership-level" name="membership_level">
+                    <option value="np">NP Membership (No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label for="description">
+                Business/Organization Description:
+                <textarea id="description" name="description" title="Describe your business or organization"></textarea>
+            </label>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+            <input type="submit" value="Submit Application">
+        </form>
+    </section>
+
+    <section class="membership-cards">
+        <div class="card" id="np-card">
+            <h3>NP Membership</h3>
+            <button onclick="openModal('np-modal')">More Info</button>
+        </div>
+        <div class="card" id="bronze-card">
+            <h3>Bronze Membership</h3>
+            <button onclick="openModal('bronze-modal')">More Info</button>
+        </div>
+        <div class="card" id="silver-card">
+            <h3>Silver Membership</h3>
+            <button onclick="openModal('silver-modal')">More Info</button>
+        </div>
+        <div class="card" id="gold-card">
+            <h3>Gold Membership</h3>
+            <button onclick="openModal('gold-modal')">More Info</button>
+        </div>
+    </section>
+</main>
+
+<!-- Modals -->
+<div id="np-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('np-modal')">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>Access to networking and events for non-profits at no cost.</p>
+    </div>
+</div>
+
+<div id="bronze-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Includes basic discounts and exclusive webinars.</p>
+    </div>
+</div>
+
+<div id="silver-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Additional discounts and priority event access.</p>
+    </div>
+</div>
+
+<div id="gold-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>All benefits included plus VIP event access and exclusive advertising opportunities.</p>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://it-it.facebook.com/" aria-label="Facebook"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/katherine-gonzales-5b8375256/" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:kathe.adriana24@gmail.com">kathe.adriana24@gmail.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+        <div class="footer-info">
+            <p>&copy;<span id="year"></span> Katherine Gonzales | Lima, Peru</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

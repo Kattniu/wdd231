@@ -82,4 +82,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Llamar a la función para cargar los datos al cargar la página
     getMembersData(url);
+    
 });
