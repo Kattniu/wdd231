@@ -23,6 +23,26 @@
         gap: 50px;
         margin-top: 40px;
     }
+    
+    .container-thanks ul{
+        list-style: none;
+        padding: 0;
+    }
+    
+    .container-thanks ul li{
+        font-size: 1.3rem;
+    }
+    .container-thanks li span {
+        font-weight: bold;
+        color: #1c86d8;
+    }
+    
+    .container-thanks p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+    
         
 
 }

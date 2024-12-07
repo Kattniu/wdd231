@@ -15,6 +15,7 @@ header {
     justify-content: space-between; /* Espacio entre logo, h1, y menú */
     padding: 1rem 2rem; /* Espaciado interno */
     gap: 1rem; /* Espaciado entre elementos */
+    margin-bottom: 1rem;
 }
 
 header img.logo {
@@ -99,7 +100,7 @@ ul.menuLinks a:hover {
 main{
     margin: 20px auto; /* Centra el main horizontalmente, crea espacio externo de 20px abajo y arriba, y auto lo centra   */
     max-width: 1200px; /* Define un ancho máximo, para que no ocupe todo el ancho de la pantalla */
-    padding: 1rem; /*Agregar espacio interno uniforme alrededor del contenido*/
+    padding: 0.5rem; /*Agregar espacio interno uniforme alrededor del contenido*/
     background-color: #1e293b; /* Azul oscuro */
     border-radius: 10px; /* Esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(48, 47, 50, 0.968); /* Sombra ligera al rededor de todo el contenido de main para destacar, simulamos un efecto "flotacion" */
