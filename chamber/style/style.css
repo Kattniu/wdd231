@@ -256,7 +256,7 @@ footer {
     color:#1e293b  ; 
     text-align: center;
     padding: 1rem 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .footer-container {
@@ -373,183 +373,145 @@ footer {
 }
 /*------ JOIN --------------------------------------*/
 main.join-main{
-    background: #4f5053;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 20px;
+    padding:15px;
+    display: flex; /* Cambia a diseño horizontal */
+    flex-direction: row; /* Asegura que los hijos se alineen horizontalmente */
+    justify-content: space-between; /* Da espacio entre el formulario y las tarjetas */
+    align-items:center;
+    gap: 10px; /* Espaciado entre el formulario y las tarjetas */
+    background: #1e293b;
 }
 
 .form-section {
-    background: white;
+    flex: 1; /* Haz que el formulario ocupe espacio proporcional */
+    max-width: 50%; /* Limita el ancho del formulario */
+    background:#b5cbe0;
     padding: 30px;
-    color: #2b3443;
+    color:#1e293b; 
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.join-main h2 {
+section.form-section h2{
     text-align: center;
-    color: #007BFF;
+    color: rgb(57, 53, 113);
+    font-size: 40px;
 }
 
-label {
+.form-section label {
     display: block;
     font-weight: bold;
-    margin: 10px 0 5px;
-    margin-bottom: 2px;
+    margin: 15px 0 5px; 
 }
 
-input, textarea, select {
+.form-section input, textarea, select {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 5px;
+    background-color: #e5ecf1ef;
+    color: #335598;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border: none;
 }
-
-input[type="submit"] {
+.form-section input[type="submit"] {
     background-color: #007BFF;
     color: white;
-    border: none;
-    padding: 12px;
-    margin-top: 20px;
+    padding: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    display: block;
+    margin: 20px auto 0; /* Centra el botón horizontalmente */
 }
-
-input[type="submit"]:hover {
+.form-section input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-textarea {
+.form-section textarea {
     resize: vertical;
     height: 100px;
 }
 
 .membership-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 900px;
+    flex: 2; /*las tarjetas ocupen el espacio restante */
+    display: flex;
+    align-items:center;
+    flex-direction: column; /* Asegura que las tarjetas se apilen verticalmente */
+    gap:3rem; /* Espaciado entre las tarjetas */
+    max-width: 500px;
 }
 
 .card {
-    background-color: white;
-    padding: 20px;
+    width: 100%; /* Asegura que las tarjetas no superen el ancho del contenedor */
+    max-width: 250px; /* Define un ancho máximo razonable */
+    padding: 20px; /* Ajusta el espacio interno */
+    text-align: center; /* Centra el contenido de las tarjetas */
+    color: white;
+    background-color: #202b3d;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 10px rgba(100, 106, 117, 0.864);
+    transition: transform 0.4s, box-shadow 0.3s;  
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(135, 144, 158, 0.2);
 }
 
 .card h3 {
+    text-align: center;
     margin-bottom: 10px;
-    color:#162265;
+    color: white;
 }
 
 .card button {
-    background-color: #28a745;
-    color: white;
+    background-color: #90cdf4;
+    color:#1e293b;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .card button:hover {
-    background-color: #218838;
+    background-color:#1e293b;
+    color: #90cdf4;
+
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-}
-
-.close {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
+*{box-sizing: border-box;}
+#dialogBox{background-color: rgb(255, 255, 255);
+border: none;
+padding:20px;
+font-size: 20px;}
+#closeButton {background-color: rgb(215, 224, 224);
+padding: 5px;}
+::backdrop{
+    background-color: rgba(27, 26, 43, 0.3) ;
 }
 
 @media (max-width: 600px) {
-    main.join-main {
-        padding: 20px;
-    }
-
-    .form-section {
-        padding: 20px;
-        width: 90%;
-    }
-    
-    .join-main h2{
-        font-size: 24px;
-    }
-
-    label {
-        font-size: 14px;
-        margin: 8px 0 4px;
-    }
-
-    input, textarea, select {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    input[type="submit"] {
-        font-size: 16px;
-        padding: 14px;
-        width: 100%;
-    }
-
-    .membership-cards {
-        grid-template-columns: 1fr; /* Una sola columna */
-        gap: 15px;
-    }
-
     .card {
+        width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+        margin-bottom: 15px;
+    }
+    main.join-main {
+        display: flex;
+        flex-direction: column; /* Cambia a diseño vertical */
+    }
+ 
+    .form-section, .membership-cards {
+        margin: 15px;
+        max-width: 100%; /* Haz que ocupen todo el ancho */
+    }
+    .form-section, .modal-content {
+        width: 100%; /* Asegura que el formulario también sea completamente fluido */
         padding: 15px;
     }
-
-    .modal-content {
-        width: 90%;
-        max-width: 400px;
-        padding: 15px;
+    button, input[type="submit"] {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+        padding: 12px; /* Tamaño cómodo para pantallas táctiles */
     }
-
-    .close {
-        font-size: 20px;
-    }
-    .close:hover {
-        color: #007BFF;
-    }
-    
 }
