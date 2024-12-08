@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="CHAMBER DIRECTORY">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Chamber Directory">
+    <meta property="og:image" content="image/io.jpg">
+    <meta property="og:url" content="https://kattniu.github.io/wdd231/"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information about AI">
+    <meta name="author" content="Katherine Gonzales">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style-large.css">
+    <script src="script/directory.js" defer></script>
+    <script src="script/discover.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <title>Chamber Directory</title>
+</head>
+
+<body>
+<header>
+        <img src="images/logo-top.webp" class="logo" loading="lazy" alt="Logo chamber of commerce"  width="80" height="100">
+        <h1>Chamber of Commerce - Peru</h1>
+    <nav id="animateme">
+    <button id="myButton" aria-label="Open navidation menu"></button>
+    <ul class="menuLinks">
+        <li><a href="index.html" title="home">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html"  title="Join">Join</a></li>
+        <li><a class="active" href="discover.html" title="Discover">Discover</a></li>
+    </ul> 
+    </nav>
+</header>
+<main class="discover-page">
+    <aside class="sidebar">
+        <section>
+            <h2>Demographics</h2>
+            <p>Explore the diverse population, culture, and economy of Peru. From its vibrant cities to its rural landscapes, Peru offers a rich tapestry of life.</p>
+        </section>
+        <section>
+            <h2>Calendar</h2>
+            <p>Upcoming events and cultural activities in Peru. Don't miss out on the celebrations!</p>
+        </section>
+        <section id="visit-message">
+            <!-- Last visit message with localStorage will appear here -->
+        </section>
+    </aside>
+    
+    <section class="gallery">
+        <h2>Local Attractions</h2>
+        <div class="image-grid">
+            <img src="images/lima.1.jpg" alt="Machu Picchu" loading="lazy" width="100" height="100">
+            <img src="images/lima.jpeg" alt="Lima's Plaza Mayor" loading="lazy" width="100" height="100">
+            <img src="images/lima3.webp" alt="Lake Titicaca" loading="lazy" width="100" height="100">
+            <img src="images/lima6.webp" alt="Nazca Lines" loading="lazy" width="100" height="100">
+            <img src="images/lima4.jpg" alt="Colca Canyon" loading="lazy" width="100" height="100">
+            <img src="images/lima5.jpg" alt="Amazon Rainforest" loading="lazy"width="100" height="100">
+            <img src="images/lima7.jpg" alt="Colca Canyon" loading="lazy" width="100" height="100">
+            <img src="images/lima8.jpg" alt="Amazon Rainforest" loading="lazy" width="100" height="100">
+        </div>
+    </section>
+    
+    <section>
+        <h2>Calendar</h2>
+        <div id="calendar">
+            <div class="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <span id="month-year"></span>
+                <button id="next-month">&gt;</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body">
+                    <!-- Calendar days will be dynamically generated here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://it-it.facebook.com/" aria-label="Facebook"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/katherine-gonzales-5b8375256/" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:kathe.adriana24@gmail.com">kathe.adriana24@gmail.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+        <div class="footer-info">
+            <p>&copy;<span id="year"></span> Katherine Gonzales | Lima, Peru</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
