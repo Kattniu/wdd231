@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF; /* White background for clarity */
+    color: #333333; /* Default text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #D91C2E; /* Red background for prominence */
+    padding: 20px;
+    color: #FFFFFF; /* White text for contrast */
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/milan-hero.jpg'); /* Sample image for hero section */
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #D91C2E; /* Red for headings */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #333333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #333333;
+}
+
+/* Footer */
+footer {
+    background-color: #008C45; /* Green background for footer */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+footer #currentyear {
+    font-weight: bold;
+}
+
+/* Color Accent - For special highlights */
+.accent {
+    color: #FFD700; /* Gold for highlighting */
+}
+
+button {
+    background-color: #D91C2E; /* Red button */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #C32F3A; /* Darker red on hover */
+}
+
+/* Links */
+a {
+    color: #D91C2E;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFD700;
+}
+
+.color{
+    background-color:#d4dac6;
+}
+/* Custom Styles for the Color Schema */
+.primary {
+    color: #B03A2E; /* Red Earth - Used for headings, buttons, and prominent elements */
+}
+
+.secondary {
+    color: #6A7F3D; /* Olive Green - Used for secondary elements like links, icons, and hover effects */
+}
+
+.text {
+    color: #333333; /* Dark Gray - For body text to provide high contrast and legibility */
+}
+
+.accent {
+    background-color: #6A7F3D;
+    color: #BDC3C7; /* Light Gray - For special highlights, borders, and subtle details */
+}
+
+.background {
+    color:#FFFFFF;
+    background-color:cadetblue; /* White - Used for most backgrounds to ensure readability */
+}
+
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p, ul, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
