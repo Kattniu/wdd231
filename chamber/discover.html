@@ -40,58 +40,93 @@
         <section>
             <h2>Demographics</h2>
             <p>Explore the diverse population, culture, and economy of Peru. From its vibrant cities to its rural landscapes, Peru offers a rich tapestry of life.</p>
+            <p>Population: 33,359,418 (2023 estimate)</p>
+            <p>Area: 1,285,216 km²</p>
+            <p>Language: Spanish, Quechua, Aymara</p>
         </section>
         <section>
-            <h2>Calendar</h2>
+            <h2>Upcoming events</h2>
             <p>Upcoming events and cultural activities in Peru. Don't miss out on the celebrations!</p>
+            <li>Mistura Food Festival - March 2024</li>
+            <li>Inti Raymi Festival - June 24, 2024</li>
+            <li>Perú Travel Expo - September 2024</li>
         </section>
         <section id="visit-message">
             <!-- Last visit message with localStorage will appear here -->
         </section>
-    </aside>
-    
-    <section class="gallery">
-        <h2>Local Attractions</h2>
-        <div class="image-grid">
-            <img src="images/lima.1.jpg" alt="Machu Picchu" loading="lazy" width="400" height="300">
-            <img src="images/lima.jpeg" alt="Lima's Plaza Mayor" loading="lazy" width="400" height="300">
-            <img src="images/lima3.webp" alt="Lake Titicaca" loading="lazy" width="400" height="300">
-            <img src="images/lima6.webp" alt="Nazca Lines" loading="lazy" width="400" height="300">
-            <img src="images/lima4.jpg" alt="Colca Canyon" loading="lazy" width="400" height="300">
-            <img src="images/lima5.jpg" alt="Amazon Rainforest" loading="lazy"width="400" height="300">
-            <img src="images/lima7.jpg" alt="Colca Canyon" loading="lazy" width="400" height="300">
-            <img src="images/lima8.jpg" alt="Amazon Rainforest" loading="lazy" width="400" height="300">
-        </div>
-    </section>
-    
-    <section>
-        <h2>Calendar</h2>
-        <div id="calendar">
-            <div class="calendar-header">
-                <button id="prev-month">&lt;</button>
-                <span id="month-year"></span>
-                <button id="next-month">&gt;</button>
+        <section>
+            <h2>Calendar</h2>
+            <div id="calendar">
+                <div class="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <span id="month-year"></span>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Calendar days will be dynamically generated here -->
+                    </tbody>
+                </table>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Sun</th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                    </tr>
-                </thead>
-                <tbody id="calendar-body">
-                    <!-- Calendar days will be dynamically generated here -->
-                </tbody>
-            </table>
+        </section>
+    </aside>
+    <section class="gallery">
+        <h2>Local Attractions - Lima</h2>
+        <div class="image-grid">
+            <figure>
+                <img src="images/lima1.jpg" alt="Lima City Sightseeing Panoramic" loading="lazy">
+                <figcaption>Lima City Sightseeing Panoramic</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima3.webp" alt="Paracaidismo" loading="lazy">
+                <figcaption>Skydiving in Miraflores</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima5.jpg" alt="parque del amor " loading="lazy">
+                <figcaption>Love Park sculture</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima6.webp" alt="lima streer" loading="lazy">
+                <figcaption>Famous Lima Street</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima7.jpg" alt="water park" loading="lazy">
+                <figcaption>Water Park</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima8.jpg" alt="Beach Costa Verde" loading="lazy">
+                <figcaption>Lima Beach, Costa Verde</figcaption>
+            </figure>
+        </div>
+    
+        <h2>Explore Perú</h2>
+        <div class="image-grid">
+            <div class="Perucard">
+                <img src="images/macchupicchu.jpg" alt="Machu Picchu" loading="lazy">
+                <p>Machu Picchu</p>
+            </div>
+            <div class="Perucard">
+                <img src="images/lineasdeNazca.jpg" alt="Líneas de Nazca" loading="lazy">
+                <p>Líneas de Nazca</p>
+            </div>
+            <div class="Perucard">
+                <img src="images/lagotiticaca.jpg" alt="Lago Titicaca" loading="lazy">
+                <p>Lago Titicaca</p>
+            </div>
         </div>
     </section>
 </main>
-
 <footer>
     <div class="footer-container">
         <div class="footer-social">
@@ -113,6 +148,5 @@
         </div>
     </div>
 </footer>
-
 </body>
 </html>
