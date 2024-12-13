@@ -1,0 +1,51 @@
+@media (min-width:780px) {
+/* Ocultar el botón del menú hamburguesa */
+#myButton {
+    display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+}
+/* Mostrar el menú como una barra horizontal */
+ul.menuLinks {
+    display: flex; /* Alinear elementos en fila */
+    flex-direction: row;
+    position: static; /* Restablecer posición */
+    justify-content: flex-end; /* Alinea el menú al lado derecho */
+    gap: 3rem; /* Espaciado entre los enlaces */
+    background-color: transparent; /* Sin fondo */
+    box-shadow: none; /* Sin sombra */
+    padding: 0;
+}
+/* Enlaces del menú */
+ul.menuLinks a {
+    color: var(--textColorGray);
+    font-weight: normal; /* Sin negrita para un diseño más limpio */
+    padding: 1rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+ }
+ ul.menuLinks a:hover {
+    color: var(--primarycolor);
+    background-color: rgba(176, 58, 46, 0.1); /* Color rojo con 30% de opacidad */
+    border-bottom: 2px solid var(--secondaryColor); /* Línea bajo el enlace */
+}
+/* Submenú en pantallas grandes */
+ul.submenu {
+    top:100%; /* Colocarlo debajo del padre */
+    right:0;
+    background-color:var(--secondaryColor);
+}
+nav ul.submenu li a {
+    padding: 20px;
+    white-space: nowrap; /* Evita que se rompa en varias líneas */
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menuLinks li:hover > ul.submenu {
+    display: block; /* Visible al pasar el mouse */
+}
+
+/* Asegurar que el padre tenga posición relativa */
+.menuLinks li {
+    position: relative;
+}
+}

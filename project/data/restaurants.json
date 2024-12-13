@@ -1,0 +1,24 @@
+{
+    "title": "Explorer Milan - Restaurantes",
+    "topRestaurants": [
+      {
+        "name": "Prime",
+        "description": "Una experiencia culinaria única en el corazón de Milán.",
+        "image": "ruta_de_la_foto1.jpg",
+        "link": "images/prime.jpg"
+      },
+      {
+        "name": "Cantine Milao",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "image": "ruta_de_la_foto2.jpg",
+        "link": "https://cantinemilano.com/"
+      },
+      {
+        "name": "Cantine Milao",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "image": "ruta_de_la_foto2.jpg",
+        "link": "https://cantinemilano.com/"
+      }
+    ]
+  }
+  

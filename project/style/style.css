@@ -1,0 +1,402 @@
+:root {
+    --primarycolor: #B03A2E;
+    --textColor: rgba(0, 0, 0, 0.925);
+    --secondaryColor: #6A7F3D;
+    --textColorGray: #333333;
+    --backgroundColor: #FFFFFF;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,  #e8efd8, var(--backgroundColor));
+    color: var(--textColor);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: var(--backgroundColor);
+    border-bottom: 2px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo-title h1 {
+    color: var(--secondaryColor);
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+header .logo {
+    width:20%;
+    height:auto;
+}
+/*------ Botón del menú hamburguesa */
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--primarycolor);
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#myButton::before {
+    content: "\2630"; /* Ícono de menú hamburguesa */
+}
+
+#myButton.open::before {
+    content: "X"; /* Ícono de cerrar */
+}
+
+/*----Links del menu */
+ul.menuLinks {
+    list-style-type: none;
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del header */
+    right: 0; /* Alineado al borde derecho */
+    background-color:var(--backgroundColor);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    z-index: 1000; /* Asegura que se superponga */
+}
+
+
+ul.menuLinks a {
+    display: block; /* Cada enlace en una nueva línea */
+    color: var(--textColorGray); 
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: bold; /* Negrita */
+    border-radius: 4px; /* Bordes suaves */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul.menuLinks a:hover {
+    color: var(--backgroundColor); /* Azul claro */
+    background-color:var(--secondaryColor); 
+}
+
+
+/* Cuando el menú está abierto */
+#animateme.open .menuLinks {
+    display: block; /* Muestra el menú */
+}
+
+/* Activo (subrayado en el enlace actual) */
+.menuLinks .active {
+    border-bottom: 2px solid var(--secondaryColor);
+}
+/* Submenú */
+ul.submenu {
+    top: 0; /* Alineado al nivel del enlace "Service" */
+    right: 100%;/* Posicionado al lado derecho */
+    background-color: var(--primarycolor); 
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    border-radius: 4px;
+    z-index: 1000;
+}
+/* Asegúrate de que el padre sea relativo para posicionar el submenú */
+.menuLinks li {
+    position: relative; /* Esto permite que el submenú se posicione correctamente */
+}
+/*--submenu---*/
+ul.submenu li a {
+    display: block;
+    color: var(--backgroundColor); 
+    text-decoration: none;
+    font-weight: normal;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+ul.submenu li a:hover {
+    color: var(--primarycolor);
+    background-color: var(--backgroundColor);
+}
+/* Mostrar submenú al pasar el mouse */
+.menuLinks li:hover > ul.submenu {
+    display: block; /* Aparece cuando se pasa el mouse */
+}
+
+
+/*--- main ---------------------------------------------------------------*/
+.hero {
+        text-align: center;
+        padding: 50px 20px;
+        }
+
+.hero img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-bottom: 30px;
+        border: 5px solid var(--backgroundColor);
+        }
+
+        .hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: #B03A2E;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #333333;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .learn-more-button {
+            background-color: #B03A2E;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #BDC3C7;
+        }
+
+         
+footer {
+    border-top: 2px solid  gray;
+    color:#1e293b  ; 
+    text-align: center;
+    padding: 0.5rem 1rem ;
+    margin-top: 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social, .footer-contact {
+    text-align: left;
+}
+
+.footer-social h3, .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color:black; 
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-social .social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social .social-icons a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+}
+
+.footer-contact a {
+    color: #162265; 
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    flex-basis: 100%;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #4f5053;
+}
+
+/*-----Restaurants------------------------*/
+.main-menu {
+    text-align: center;/*Alineamos el contenido al centro */
+    margin-bottom: 2rem;/*Aregamos un espacio inferior para que este mas lejos del contenido de abajo*/
+}
+.main-menu button { /*Estilos basicos para nuestros botones grid y list*/
+    padding: 0.8rem 1.2rem; /*Definimos un espacio interno amplio para que los botones seas comodos y estilosos de clicar */
+    font-weight: bold;/*texto negrita*/
+    font-size: 1rem;
+    background-color: #253144; /* Azul oscuro más intenso */
+    color: #d1e7fd; /* Azul claro */
+    border: 2px solid #90cdf4; /* Borde azul claro */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para hover (para cualquier cambio, como por ejemplo : el cambio del color)*/
+}
+.main-menu button:hover {
+    background-color: #90cdf4; /* Fondo azul claro */
+    color: #1e293b; /* Texto azul oscuro */
+}
+
+/*------------ Grid layout for the cards (creamos nuestras tarjetas) */
+.grid {
+    display: grid; /*RECUERDA: Esto activa el diseño en cuadricula*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*Divide el espacio en |columnas| adaptables.
+    Cada columna tiene un   |ancho |  mínimo de "250px".
+    auto-fit: ajusta el número de columnas según el ancho de la pantalla.
+    1fr permite que las columnas ocupen el espacio disponible.
+*/
+    gap: 1rem; /* Espaciado entre elementos */
+    padding: 1rem; /*Espacio interno*/
+    background-color: #253144; /* Azul más oscuro */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/*------------- Individual cards - estilizamos  :)  */
+.grid section {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e293b; /* Azul oscuro */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    color: #d1e7fd; /* Azul claro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar */
+}
+
+.grid section:hover {
+    transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba y si lo queremos hacia abajo solo debemos quitar el "-"*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más prominente */
+}
+
+/*--------------------Images within the cards- nuestros logos--*/
+.grid img {
+    max-width: 60%;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    border: 3px solid #90cdf4; /* Borde azul claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    margin-bottom: 0.5rem;
+}
+
+/*-----------Typography and details within cards */
+.grid h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #90cdf4; /* Azul claro */
+}
+
+.grid p { /*el contenido dentro de <p>*/
+    font-size: 0.9rem;
+    margin: 0.2rem 0 ;
+}
+
+.grid a {  /*sitio web*/
+    text-decoration: none;
+    font-weight: bold;
+    color: #8aa3b6; /* Azul claro */
+    transition: color 0.3s ease;
+}
+
+.grid a:hover { 
+    color: #ffffff; /* Cambia a blanco al pasar sobre "sitio web"*/
+}
+
+/*---------------Styling for the list view */
+.list {
+    display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
+    flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
+    gap: 1rem; /* Espaciado entre elementos */
+    padding: 3rem;
+    background-color: #253144; /* Azul más oscuro */
+    border-radius: 10px;
+}
+
+.list section {
+    display: flex;/* Flexbox para organizar los contenidos */
+    /*Esto permite que los elementos dentro de la tarjeta (por ejemplo, la imagen, el nombre,
+     la dirección) se alineen en una fila horizontal.*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem; /* Espaciado entre elementos */
+    padding: 1rem;
+    background-color: #1e293b; /* Azul oscuro */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    color: #d1e7fd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.list img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #90cdf4;
+}
+
+.list h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #90cdf4;
+}
+
+.list p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #90cdf4;
+    transition: color 0.3s ease;
+}
+
+.list a:hover {
+    color: #ffffff;
+}
