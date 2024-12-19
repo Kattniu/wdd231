@@ -11,6 +11,7 @@
         <meta property="og:description" content="Offering information on the best places to eat, visit, and experience in Milan.">
         <meta property="og:image" content="https://kattniu.github.io/wdd231/images/io.jpg">
         <meta property="og:url" content="https://kattniu.github.io/wdd231/"> 
+    
         <!-- Iconos y estilos -->
         <link rel="icon" href="images/Favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style/style.css">
@@ -20,7 +21,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:slnt,wght@2,328&family=Bebas+Neue&family=Montserrat:wght@342&family=Playwrite+AR+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!-- Scripts -->
-        <script src="script/attraction.js" defer></script>
+        <script src="script/script.js" defer></script>
+    
         <title>Milan Explorer</title>
     </head>
 <body>
@@ -34,35 +36,39 @@
         <button id="myButton" aria-label="Open navidation menu"></button>
         <ul class="menuLinks">
             <li><a href="milan.html" title="home">Home</a></li>
-            <li><a class="active" href="#"> Service </a>
+            <li><a href="#"> Service </a>
                 <ul class="submenu">
                     <li><a href="restaurants.html">Restaurants</a></li>
                     <li><a href="attractions.html">Attractions</a></li>
                 </ul></li>
-            <li><a href="contactUs.html"  title="Join">Contact Us</a></li>
+            <li><a  class="active" href="contactUs.html" title="Join">Contact Us</a></li>
         </ul> 
         </nav>
     </header>
-    <main>
-        <div class="main-attraction">   
-            <h1>Top 10 Unmissable Sights in Milan</h1>
-            <p class="descripcion">
-            Milan offers a perfect mix of art, culture, and breathtaking architecture. Whether you’re admiring the stunning Gothic Duomo or wandering through historic streets, these top 10 must-visit locations will let you discover Milan’s beauty, all within walking distance and at no cost. Prepare to be amazed by the charm of this vibrant city!
-            </p>
-             <button id="grid-id" aria-label="Show in grid view">&#9871;</button>
-            <button id="list-id" aria-label="Show in list view">&#9868;</button>
-            <div id="tarjetas" class="migrid"></div>
-        </div>
-        
-        <!-- Sección de Museos -->
-        <section class="museos">
-            <h2 class="titulo">Best Place in Milan</h2>
-            <p class="descripcion2">
-            Take your Milan adventure to the next level with these unique experiences that offer something beyond the usual tourist spots. Whether it’s exploring hidden museums, wandering through historical churches, or enjoying exclusive cultural activities, these experiences are perfect for those looking to dive deeper into Milan’s rich history and vibrant culture.
-            </p>
-            <div id="museos-cards" class="migrid"></div>
-        </section>
-    </main>       
+<main class="fondo">
+  <!-- Formulario de contacto -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you!</p>
+    <p>Fill out the form below and we'll get back to you soon.</p>
+<form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" placeholder="Enter the subject" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="formResponse"></div>
+  </section>
+</main>
     <!-- Footer -->
     <footer>
         <div class="footer-container">
@@ -95,4 +101,5 @@
         </div>
     </footer>
 </body>
+
 </html>

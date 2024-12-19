@@ -96,16 +96,7 @@ ul.menuLinks a:hover {
 }
 
 /*------------Main--------------------------------*/
-/* General styling for the main container */
-main{
-    margin: 20px auto; /* Centra el main horizontalmente, crea espacio externo de 20px abajo y arriba, y auto lo centra   */
-    max-width: 1200px; /* Define un ancho máximo, para que no ocupe todo el ancho de la pantalla */
-    padding: 0.5rem; /*Agregar espacio interno uniforme alrededor del contenido*/
-    background-color: #1e293b; /* Azul oscuro */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(48, 47, 50, 0.968); /* Sombra ligera al rededor de todo el contenido de main para destacar, simulamos un efecto "flotacion" */
-    color: #d1e7fd; /* Texto en azul claro */
-}
+
 
 /*-----------------Style for the toggle menu buttons(grid y list)*/
 .main-menu {

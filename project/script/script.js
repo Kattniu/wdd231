@@ -9,7 +9,7 @@ hamburger.addEventListener('click', () => {
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-
+//-----------------------------------------------------------------------------------
 const url = 'data/restaurants.json'; // Ruta al archivo JSON
 const display = document.querySelector("#cards"); // Contenedor donde se mostrarán las tarjetas
 
@@ -41,13 +41,13 @@ const displayRestaurants = (members) => {
         portrait.setAttribute("src", member.imageUrl);
         portrait.setAttribute("alt", `Logo de ${member.name}`);
         portrait.setAttribute("loading", "lazy");
-        portrait.setAttribute("width", "100");
-        portrait.setAttribute("height", "100");
+        portrait.setAttribute("width", "200");
+        portrait.setAttribute("height", "180");
         address.textContent = member.address;
         phoneNumber.textContent = member.phone;
         website.setAttribute("href", member.website);
         website.setAttribute("target", "_blank"); // Abrir el enlace en una nueva pestaña
-        website.textContent = "Sitio web";
+        website.textContent = "Visit Website";
 
         // Agregar los elementos a la tarjeta
         card.appendChild(companyName);
@@ -86,4 +86,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Llamar a la función para cargar los datos al cargar la página
     getRestaurantsData(url);
     
+});
+
+// Capturamos el formulario
+const contactForm = document.getElementById("contactForm");
+// Capturamos el contenedor de respuesta
+const formResponse = document.getElementById("formResponse");
+// Evento cuando el usuario envía el formulario
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // Evita el envío tradicional del formulario
+
+  // Capturar valores del formulario
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Validación básica
+  if (name === "" || email === "" || subject === "" || message === "") {
+    formResponse.style.color = "red";
+    formResponse.textContent = "Please fill in all fields!";
+    return;
+  }
+
+  // Mensaje de éxito
+  formResponse.style.color = "#4d6b2f";
+  formResponse.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+
+  // Limpiar formulario
+  contactForm.reset();
 });

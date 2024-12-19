@@ -1,23 +1,85 @@
 {
     "title": "Explorer Milan - Restaurantes",
-    "topRestaurants": [
+    "members": [
       {
         "name": "Prime",
         "description": "Una experiencia culinaria única en el corazón de Milán.",
-        "image": "ruta_de_la_foto1.jpg",
-        "link": "images/prime.jpg"
+        "imageUrl": "images/prime.jpg",
+        "address": "Viale Francesco Crispi,2, 20154",
+        "phone": "+39 340 275 1712",
+        "website": "https://prime.com"
       },
       {
-        "name": "Cantine Milao",
+        "name": "Cantine Milano",
         "description": "Deliciosa cocina italiana con un toque moderno.",
-        "image": "ruta_de_la_foto2.jpg",
-        "link": "https://cantinemilano.com/"
+        "imageUrl": "images/cantine.jpg",
+        "address": "Via Carlo Goldoni, 58, 20129",
+        "phone": "+39 331 732 0063",
+        "website": "https://cantinemilano.com"
       },
       {
-        "name": "Cantine Milao",
+        "name": "Glory Pop",
         "description": "Deliciosa cocina italiana con un toque moderno.",
-        "image": "ruta_de_la_foto2.jpg",
-        "link": "https://cantinemilano.com/"
+        "imageUrl": "images/gloryPop.jpg",
+        "address": "Viale Lazio, 7 20135",
+        "phone": "+39 02 4770 7717",
+        "website": "https://glorypop.it/"
+      },
+      {
+        "name": "Panigacci",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "imageUrl": "images/panigacci.jpg",
+        "address": "Via Bezzecca, 2, 20135",
+        "phone": " 02 4776 9812",
+        "website": "https://www.panigaccimilanobistrot.it/"
+      },
+      {
+        "name": "Pinkeri",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "imageUrl": "images/pinkeri.jpeg",
+        "address": "Via Giuseppe Antonio Borgese, 14, 20154",
+        "phone": "020 9972975",
+        "website": "https://www.pinkeri.it/"
+      },
+      {
+        "name": "La Taverna della Trisa",
+        "description": "Una experiencia culinaria única en el corazón de Milán.",
+        "imageUrl": "images/taverna.jpg",
+        "address": "Viale Francesco Crispi,2, 20154",
+        "phone": "+39 340 275 1712",
+        "website": "http://www.tavernadellatrisa.it/history.html"
+      },
+      {
+        "name": "Trattoria Aurora",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "imageUrl": "images/trattoria.jpg",
+        "address": "Via Carlo Goldoni, 58, 20129",
+        "phone": "+39 331 732 0063",
+        "website": "https://www.tripadvisor.it/Restaurant_Review-g187849-d696455-Reviews-Trattoria_Aurora-Milan_Lombardy.html"
+      },
+      {
+        "name": "Via Pasteria Milano",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "imageUrl": "images/pasteria.jpg",
+        "address": "Viale Lazio, 7 20135",
+        "phone": "+39 02 4770 7717",
+        "website": "https://viapasteria.com/"
+      },
+      {
+        "name": "Nabucco",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "imageUrl": "images/nabucco.jpg",
+        "address": "Via Bezzecca, 2, 20135",
+        "phone": " 02 4776 9812",
+        "website": "https://www.panigaccimilanobistrot.it/"
+      },
+      {
+        "name": "Il Salumaio",
+        "description": "Deliciosa cocina italiana con un toque moderno.",
+        "imageUrl": "images/salume.jpg",
+        "address": "Via Giuseppe Antonio Borgese, 14, 20154",
+        "phone": "020 9972975",
+        "website": "https://www.ilsalumaiodimontenapoleone.it/"
       }
     ]
   }

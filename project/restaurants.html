@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Metadatos para SEO y accesibilidad -->
     <meta charset="UTF-8">
@@ -17,12 +16,10 @@
     <link rel="icon" href="images/Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-large.css">
-
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:slnt,wght@2,328&family=Bebas+Neue&family=Montserrat:wght@342&family=Playwrite+AR+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Scripts -->
     <script src="script/script.js" defer></script>
 
@@ -38,25 +35,74 @@
          <nav id="animateme">
         <button id="myButton" aria-label="Open navidation menu"></button>
         <ul class="menuLinks">
-            <li><a class="active" href="milan.html" title="home">Home</a></li>
-            <li><a href="#"> Service </a>
+            <li><a href="milan.html" title="home">Home</a></li>
+            <li><a  class="active"  href="#"> Service </a>
                 <ul class="submenu">
                     <li><a href="restaurants.html">Restaurants</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
                     <li><a href="attractions.html">Attractions</a></li>
                 </ul></li>
-            <li><a href="#"  title="Join">Contact Us</a></li>
+            <li><a href="contactUs.html"  title="Join">Contact Us</a></li>
         </ul> 
         </nav>
     </header>
     <main>
-        <div class="main-menu">
-            <button id="grid" aria-label="Mostrar en vista de cuadrícula">⏹️Grid</button>
-            <button id="list" aria-label="Mostrar en vista de lista">📄List</button>
+
+        <div class="main-menu">   
+            <h1>The Best Restaurants in Milan</h1>
+            <p class="description">
+            These are the best restaurants in Milan, carefully selected based on my personal experience and recommendations from trusted platforms. From traditional Italian flavors to modern culinary masterpieces, there's something here for every taste.
+            </p>
+            <button id="grid" aria-label="Show in grid view">⏹️ Grid</button>
+            <button id="list" aria-label="Show in list view">📄 List</button>
         </div>
-        <hr>
         <div id="cards" class="grid"></div>
+
+        <section id="aperitivos">
+            <h1>Top Aperitivos in Milan</h1>
+            <p class="description">
+            In Italy, the aperitivo is more than just a drink—it's a cultural ritual that combines socializing with delicious pre-dinner drinks and light snacks. Originating in Northern Italy, the tradition of aperitivo is an essential part of Milanese life, offering the perfect opportunity to relax, chat, and enjoy the vibrant atmosphere of the city’s best bars and cafes. Below are some must-visit spots to experience this uniquely Italian tradition.
+            </p>
+            <div class="aperitivos-grid">
+                <article>
+                    <h3>N'Ombra de Vin</h3>
+                    <img src="images/aperitivo1.jpg" alt="N'Ombra de Vin" loading="lazy" width="150" height="150">
+                    <p>Address: Via S. Marco, 2, 20121 Milano MI</p>
+                    <p>Phone: +39 02 659 9650</p>
+                    <a href="https://www.nombradevin.it/" target="_blank">Visit Website</a>
+                </article>
+                <article>
+                    <h3>Camparino in Galleria</h3>
+                    <img src="images/aperitivo2.jpg" alt="Camparino in Galleria" loading="lazy" width="150" height="150">
+                    <p>Address: Piazza del Duomo, 21, 20121 Milano MI</p>
+                    <p>Phone: +39 02 8646 4435</p>
+                    <a href="https://www.camparino.com/" target="_blank">Visit Website</a>
+                </article>
+                <article>
+                    <h3>Bar Basso</h3>
+                    <img src="images/aperitivo3.jpg" alt="Bar Basso" loading="lazy" width="150" height="150">
+                    <p>Address: Via Plinio, 39, 20129 Milano MI</p>
+                    <p>Phone: +39 02 2940 0580</p>
+                    <a href="https://www.barbasso.com/" target="_blank">Visit Website</a>
+                </article>
+                <article>
+                    <h3>Mag Café</h3>
+                    <img src="images/aperitivo4.jpg" alt="Mag Café" loading="lazy" width="150" height="150">
+                    <p>Address: Ripa di Porta Ticinese, 43, 20143 Milano MI</p>
+                    <p>Phone: +39 02 3956 2876</p>
+                    <a href="https://www.magcafe.com/" target="_blank">Visit Website</a>
+                </article>
+                <article>
+                    <h3>Il Bar</h3>
+                    <img src="images/aperitivo5.jpg" alt="Il Bar" loading="lazy" width="150" height="150">
+                    <p>Address: Via Manzoni, 31, 20121 Milano MI</p>
+                    <p>Phone: +39 02 8962 0555</p>
+                    <a href="https://www.ilbar.it/" target="_blank">Visit Website</a>
+                </article>
+            </div>
+        </section>
+        
     </main>
+    
     <!-- Footer -->
     <footer>
         <div class="footer-container">

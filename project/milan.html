@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Metadatos para SEO y accesibilidad -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Milan's best attractions, restaurants, and experiences.">
-    <meta name="author" content="Katherine Gonzales">
-    <meta property="og:title" content="Milan Explorer">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Offering information on the best places to eat, visit, and experience in Milan.">
-    <meta property="og:image" content="https://kattniu.github.io/wdd231/images/io.jpg">
-    <meta property="og:url" content="https://kattniu.github.io/wdd231/"> 
-
-    <!-- Iconos y estilos -->
-    <link rel="icon" href="images/Favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style-large.css">
-
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script src="script/script.js" defer></script>
-
-    <title>Milan Explorer</title>
-</head>
-
+    <head>
+        <!-- Metadatos para SEO y accesibilidad -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore Milan's best attractions, restaurants, and experiences.">
+        <meta name="author" content="Katherine Gonzales">
+        <meta property="og:title" content="Milan Explorer">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Offering information on the best places to eat, visit, and experience in Milan.">
+        <meta property="og:image" content="https://kattniu.github.io/wdd231/images/io.jpg">
+        <meta property="og:url" content="https://kattniu.github.io/wdd231/"> 
+    
+        <!-- Iconos y estilos -->
+        <link rel="icon" href="images/Favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/style-large.css">
+        <!-- Fuentes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:slnt,wght@2,328&family=Bebas+Neue&family=Montserrat:wght@342&family=Playwrite+AR+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="script/script.js" defer></script>
+        <script src="script/milan.js" defer></script>
+        <title>Milan Explorer</title>
+    </head>
 <body>
     <!-- Header con logo y navegación -->
     <header>
@@ -43,31 +39,77 @@
             <li><a href="#"> Service </a>
                 <ul class="submenu">
                     <li><a href="restaurants.html">Restaurants</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
                     <li><a href="attractions.html">Attractions</a></li>
                 </ul></li>
-            <li><a href="#"  title="Join">Contact Us</a></li>
+            <li><a href="contactUs.html"  title="Join">Contact Us</a></li>
         </ul> 
         </nav>
     </header>
-    <main>
         <!-- Sección Hero -->
-        <section class="hero">
-            <img src="images/milan2.webp" alt="View of Milan Duomo" class="hero-image">
-            <h1>Let's Explore The World with Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <button class="button learn-more-button">Learn More</button>
-        </section>
-
-        <!-- Galería -->
-        <section class="gallery">
-                <div class="gallery-container">
-                <img src="images/castello.jpg" alt="View of Castello Sforzesco">
-                <img src="images/navigli.jpg" alt="Night view of Navigli canal area in Milan">
+    <main class="main-index">  
+            <section class="hero">
+                <img src="images/milan.jpg" alt="View of Milan Duomo" class="hero-image">
+                <div class="hero-text">
+                    <h1>Let's Explore Milan with Us</h1>
+                    <button class="learn-more-button" id="open-modal" >Learn More</button>
+                </div>
+            </section>
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <h2>Explore Milan</h2>
+                <p>Welcome to Milan, a city where history, art, and style meet. Marvel at the stunning Duomo Cathedral, 
+                    stroll through the elegant Galleria Vittorio Emanuele II, and admire Da Vinci's "The Last Supper". 
+                        Relax by the Navigli canals, indulge in Milanese cuisine, and explore the city’s vibrant culture.
+                    From fashion to football, art to architecture—Milan has something for everyone. 
+                    Let the beauty and energy of this iconic city inspire you!</p>
+                <img src="images/tram.jpg" alt="Navigli canal" class="modal-image">
             </div>
-        </section>
+        </div>
+        <!-- Contenedor Flexbox Principal -->
+        <div class="content-container">
+            <!-- Columna Izquierda: Clima -->
+            <div class="left-column">
+                <!-- Clima Actual -->
+                <section class="weather">
+                    <div class="current-weather">
+                        <h2>Current Weather</h2>
+                        <img id="weather-icon" alt="Weather Icon">
+                        <div class="weather-info">
+                            <p id="temp">--°C</p>
+                            <p id="weather-description">Loading...</p>
+                            <ul>
+                                <li><strong>High:</strong> <span id="high">--°C</span></li>
+                                <li><strong>Low:</strong> <span id="low">--°C</span></li>
+                                <li><strong>Humidity:</strong> <span id="humidity">--%</span></li>
+                                <li><strong>Sunrise:</strong> <span id="sunrise">--:--</span></li>
+                                <li><strong>Sunset:</strong> <span id="sunset">--:--</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pronóstico del Clima -->
+                <section class="weather-forecast">
+                    <h2>Weather Forecast</h2>
+                    <ul>
+                        <li>Today: <span id="forecast-today">--°C</span></li>
+                        <li>Tomorrow: <span id="forecast-wed">--°C</span></li>
+                        <li>After Tomorrow: <span id="forecast-thu">--°C</span></li>
+                    </ul>
+                </section>
+            </div>
+            <!-- Columna Derecha: Galería -->
+            <div class="right-column">
+                <section class="gallery">
+                    <div class="gallery-container">
+                        <img src="images/castello.jpg" alt="Castello Sforzesco" />
+                        <img src="images/navigli.jpg" alt="Navigli canal" />
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
-
     <!-- Footer -->
     <footer>
         <div class="footer-container">

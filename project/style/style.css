@@ -1,19 +1,25 @@
 :root {
     --primarycolor: #B03A2E;
-    --textColor: rgba(0, 0, 0, 0.925);
+    --primerColor:#d53d3d;
     --secondaryColor: #6A7F3D;
-    --textColorGray: #333333;
+    --tercerColor: #558B2F;
+    --textColor:#333333;
+    --textColorGray: #666666;
     --backgroundColor: #FFFFFF;
+    --hoverColor: #e67252;
+    --linkColor: #336699;
+    --fontFamilyHeader: "Bebas Neue";
+    --fontFamily1:"Montserrat";
+    --fontFamily2:"Afacad Flux";
+    --fontFamily3:'Montserrat', sans-serif; 
+    --fontFamily4:'Open Sans', sans-serif; 
 }
-
 body {
-    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom,  #e8efd8, var(--backgroundColor));
+    background: linear-gradient(to bottom,  #edf6de, var(--backgroundColor));
     color: var(--textColor);
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -26,20 +32,23 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+/* General styling for the main container */
+main{
+    margin: 20px auto; /* Centra el main horizontalmente, crea espacio externo de 20px abajo y arriba, y auto lo centra   */
+    max-width: 1200px; /* Define un ancho máximo, para que no ocupe todo el ancho de la pantalla */
+    padding: 0.5rem; /*Agregar espacio interno uniforme alrededor del contenido*/
+}
 .header-logo-title {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .header-logo-title h1 {
     color: var(--secondaryColor);
-    font-size: 3rem;
+    font-size: 4rem;
+    font-family:var(--fontFamilyHeader);
     margin: 0;
-    font-weight: bold;
 }
-
 header .logo {
     width:20%;
     height:auto;
@@ -78,12 +87,11 @@ ul.menuLinks {
 
 
 ul.menuLinks a {
+    font-family: var(--fontFamily1);
     display: block; /* Cada enlace en una nueva línea */
     color: var(--textColorGray); 
     text-decoration: none;
     padding: 1rem 2rem;
-    font-weight: bold; /* Negrita */
-    border-radius: 4px; /* Bordes suaves */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -91,13 +99,10 @@ ul.menuLinks a:hover {
     color: var(--backgroundColor); /* Azul claro */
     background-color:var(--secondaryColor); 
 }
-
-
 /* Cuando el menú está abierto */
 #animateme.open .menuLinks {
     display: block; /* Muestra el menú */
 }
-
 /* Activo (subrayado en el enlace actual) */
 .menuLinks .active {
     border-bottom: 2px solid var(--secondaryColor);
@@ -113,7 +118,6 @@ ul.submenu {
     display: none; /* Oculto por defecto */
     position: absolute;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    border-radius: 4px;
     z-index: 1000;
 }
 /* Asegúrate de que el padre sea relativo para posicionar el submenú */
@@ -136,68 +140,14 @@ ul.submenu li a:hover {
 .menuLinks li:hover > ul.submenu {
     display: block; /* Aparece cuando se pasa el mouse */
 }
-
-
-/*--- main ---------------------------------------------------------------*/
-.hero {
-        text-align: center;
-        padding: 50px 20px;
-        }
-
-.hero img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        margin-bottom: 30px;
-        border: 5px solid var(--backgroundColor);
-        }
-
-        .hero h1 {
-        font-family: 'Montserrat', sans-serif;
-        color: #B03A2E;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            color: #333333;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .learn-more-button {
-            background-color: #B03A2E;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px 20px;
-        }
-
-        .gallery img {
-            width: 150px;
-            height: 150px;
-            border: 2px solid #BDC3C7;
-        }
-
-         
 footer {
-    border-top: 2px solid  gray;
-    color:#1e293b  ; 
+    background-color: var(--primarycolor);
+    border-top: 5px solid var(--backgroundColor);
+    color:var(--backgroundColor)  ; 
     text-align: center;
     padding: 0.5rem 1rem ;
     margin-top: 1rem;
 }
-
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -206,183 +156,334 @@ footer {
     justify-content: space-between;
     gap: 1rem;
 }
-
 .footer-container div {
     flex: 1;
     min-width: 200px;
 }
-
 .footer-social, .footer-contact {
     text-align: left;
 }
-
 .footer-social h3, .footer-contact h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color:black; 
+    font-family: var(--fontFamilyHeader);
+    margin-bottom: 10px;
+    font-size: 1.5rem;    
 }
-
 .footer-social .social-icons {
     display: flex;
     gap: 0.5rem;
 }
-
 .footer-social .social-icons a img {
     width: 32px;
     height: 32px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .footer-social .social-icons a img:hover {
     transform: scale(1.2);
     filter: brightness(1.5);
 }
-
 .footer-contact p {
-    margin: 0.5rem 0;
+    font-family: var(--fontFamily1);
+    margin: 0.4rem 0;
 }
-
 .footer-contact a {
-    color: #162265; 
+    color: var(--backgroundColor);
     text-decoration: none;
 }
-
 .footer-contact a:hover {
     text-decoration: underline;
+    color: var(--linkColor);
 }
-
 .footer-info {
     flex-basis: 100%;
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: #4f5053;
+    font-family: var(--fontFamily2);
+}
+/*--- milan---------------------------------------------------------------*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Altura ajustada en pantallas pequeñas */
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-/*-----Restaurants------------------------*/
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el contenedor */
+    filter: brightness(60%); /* Oscurece la imagen para mejorar la legibilidad */
+}
+.hero-text {
+    font-family: var(--fontFamily1);
+    position: absolute;
+    bottom: 60%; /* Texto más bajo en pantallas pequeñas */
+    left: 5%;
+    z-index: 2;
+    color: var(--backgroundColor);
+    text-shadow: 0 1px 2px rgba(62, 60, 60, 0.745); /* Sombra para el texto */
+    text-align: center;
+    font-size: 1.3rem; /* Tamaño de texto más pequeño */
+}
+/* Contenedor Principal */
+.content-container {
+    font-family: var(--fontFamily2);
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Mayor espacio entre columnas */
+    margin-top: 20px;
+}
+
+.left-column, .right-column {
+    flex: 1; /* 50% del ancho */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centra imágenes */
+}
+.gallery-container img {
+    width: 80%; /* Ocupa el ancho completo */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Recorta sin deformar */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Efecto zoom */
+}
+
+/* Secciones Clima */
+.weather, .weather-forecast {
+    background-color:rgba(255, 251, 251, 0.823);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.weather h2, .weather-forecast h2 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: #d53d3d; /* Color primario */
+}
+.weather ul, .weather-forecast ul {
+    list-style: none;
+    padding: 0;
+}
+
+.weather ul li, .weather-forecast ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Botón Mejorado */
+.learn-more-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: relative;
+    right: 30%;
+    background-color:var(--hoverColor);
+    color: white;
+    border: 1px solid var(--primerColor);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: var(--primarycolor);
+    transform: scale(1.06);
+}
+/* Responsive */
+@media (max-width: 400px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .gallery-container img {
+        height: 150px;
+    }
+}
+
+/*-- modal--*/
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Encima de todo */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 5px 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.581);
+    text-align: center;
+    position: relative;
+    width: 70%;
+    max-width: 50%;
+}
+.modal-content p{
+    font-size: 1rem; /* Tamaño de texto cómodo para lectura */
+    line-height: 1.2; /* Espaciado entre líneas para mayor legibilidad */
+    text-align: justify; /* Alinear el texto a ambos lados para un estilo más profesional */
+    color: var(--textColorGray); /* Un gris medio que sea agradable a la vista */
+    max-width: 800px; /* Limitar el ancho del texto para una mejor legibilidad */
+    margin: 0 auto 2rem auto; /* Centrar el texto y añadir espacio inferior */
+    padding: 0 20px; /* Espaciado interno para evitar que el texto se pegue al borde */
+    
+}
+.modal-content h2{
+    font-size: 2rem;
+    color: var(--primarycolor);
+}
+.modal-content img{
+    width: 60%;
+    margin-bottom: 20px;
+}
+/* Cerrar Modal */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--hoverColor);
+    transition: color 0.3s ease;
+}
+.close-button:hover {
+    color: var(--primerColor);
+}
+/* Modal Image */
+.modal-image {
+    margin-top: 10px;
+    width: 50%;
+    border-radius: 8px;
+    height: auto;
+}
+/*-----Restaurants------------------------------------------------------------------------------*/
 .main-menu {
     text-align: center;/*Alineamos el contenido al centro */
     margin-bottom: 2rem;/*Aregamos un espacio inferior para que este mas lejos del contenido de abajo*/
 }
+.main-menu h1{
+    font-family: var(--fontFamily1);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;  
+}
 .main-menu button { /*Estilos basicos para nuestros botones grid y list*/
     padding: 0.8rem 1.2rem; /*Definimos un espacio interno amplio para que los botones seas comodos y estilosos de clicar */
     font-weight: bold;/*texto negrita*/
-    font-size: 1rem;
-    background-color: #253144; /* Azul oscuro más intenso */
-    color: #d1e7fd; /* Azul claro */
-    border: 2px solid #90cdf4; /* Borde azul claro */
+    font-size: 0.9rem;
+    background-color: var(--primarycolor);
+    color: var(--backgroundColor); 
+    border: 1px solid var(--hoverColor); 
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease; /* Transición suave para hover (para cualquier cambio, como por ejemplo : el cambio del color)*/
 }
 .main-menu button:hover {
-    background-color: #90cdf4; /* Fondo azul claro */
-    color: #1e293b; /* Texto azul oscuro */
+    background-color: var(--hoverColor);
+    color:var(--backgroundColor);
 }
-
-/*------------ Grid layout for the cards (creamos nuestras tarjetas) */
+/*----- Grid layout for the cards (creamos nuestras tarjetas) */
 .grid {
     display: grid; /*RECUERDA: Esto activa el diseño en cuadricula*/
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     /*Divide el espacio en |columnas| adaptables.
     Cada columna tiene un   |ancho |  mínimo de "250px".
     auto-fit: ajusta el número de columnas según el ancho de la pantalla.
-    1fr permite que las columnas ocupen el espacio disponible.
-*/
-    gap: 1rem; /* Espaciado entre elementos */
-    padding: 1rem; /*Espacio interno*/
-    background-color: #253144; /* Azul más oscuro */
+    1fr permite que las columnas ocupen el espacio disponible.*/
+    gap: 10px; /* Espaciado entre elementos */
+    padding: 2rem; /*Espacio interno*/
     border-radius: 10px; /* Esquinas redondeadas */
 }
-
-/*------------- Individual cards - estilizamos  :)  */
+/*---------- Individual cards - estilizamos  :)  */
 .grid section {
     text-align: center;
-    padding: 1rem;
-    background-color: #1e293b; /* Azul oscuro */
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
-    color: #d1e7fd; /* Azul claro */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar */
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.238);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.375); /* Borde ligeramente visible */
+    transition: all 0.3s ease; /* Transición suave */
 }
-
 .grid section:hover {
     transform: translateY(-5px); /* Mueve la tarjeta ligeramente hacia arriba y si lo queremos hacia abajo solo debemos quitar el "-"*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más prominente */
 }
-
-/*--------------------Images within the cards- nuestros logos--*/
+/*---Images within the cards- nuestros logos--*/
 .grid img {
-    max-width: 60%;
+    padding: 5px;
+    max-width: 100%;
     border-radius: 50%; /* Hace que la imagen sea circular */
-    border: 3px solid #90cdf4; /* Borde azul claro */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
-
-/*-----------Typography and details within cards */
+/*---Typography and details within cards */
 .grid h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0.5rem 0;
-    color: #90cdf4; /* Azul claro */
 }
-
 .grid p { /*el contenido dentro de <p>*/
     font-size: 0.9rem;
     margin: 0.2rem 0 ;
 }
-
 .grid a {  /*sitio web*/
+    display: inline-block; /* Para que se comporte como botón */
     text-decoration: none;
     font-weight: bold;
-    color: #8aa3b6; /* Azul claro */
-    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-.grid a:hover { 
-    color: #ffffff; /* Cambia a blanco al pasar sobre "sitio web"*/
-}
-
 /*---------------Styling for the list view */
 .list {
     display: flex;/*RECUERDA: flex es la mejor forma para organizar el contenido en una filo O columna */
     flex-direction: column; /*Dedinimos la direccion principal que sera una columna, uno debajo del otro*/
     gap: 1rem; /* Espaciado entre elementos */
-    padding: 3rem;
-    background-color: #253144; /* Azul más oscuro */
+    padding: 1rem;
     border-radius: 10px;
 }
-
 .list section {
     display: flex;/* Flexbox para organizar los contenidos */
     /*Esto permite que los elementos dentro de la tarjeta (por ejemplo, la imagen, el nombre,
      la dirección) se alineen en una fila horizontal.*/
     align-items: center;
     justify-content: space-between;
-    gap: 1rem; /* Espaciado entre elementos */
-    padding: 1rem;
-    background-color: #1e293b; /* Azul oscuro */
+    padding: 0.6rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    color: #d1e7fd;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .list section:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-
-.list img {
-    max-width: 50px;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid #90cdf4;
+.list img{
+    display: none;
 }
-
 .list h2 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #90cdf4;
+    font-size: 1rem;
+    padding: 10px;
 }
 
 .list p {
@@ -391,12 +492,329 @@ footer {
 }
 
 .list a {
+    padding: 20px;
     text-decoration: none;
     font-weight: bold;
-    color: #90cdf4;
     transition: color 0.3s ease;
 }
-
-.list a:hover {
-    color: #ffffff;
+/*-------------- Color y estilo para Grid y list--------*/
+.grid section, .list section {
+    background-color: var(--backgroundColor);
+    color: var(--textColor); /* Texto gris oscuro */
 }
+.grid h2, .list h2 {
+    font-family:var(--fontFamily1);
+    color: var(--textColor); /* Azul oscuro para títulos */
+}
+.grid p, .list p {
+    color: var(--textColorGray); /* Texto secundario en gris mediano */
+}
+.grid a, .list a {
+    color: var(--linkColor); /* Enlaces en azul oscuro */
+}
+.grid a:hover, .list a:hover {
+    color: var(--hoverColor); /* Enlaces cambian a rojo claro al pasar */
+}
+.grid, .list{
+    background-color: var(--secondaryColor);
+}
+/*--------- aperitivo----------------*/
+#aperitivos h1{
+    font-family: var(--fontFamily1);
+    margin: 2rem;
+    text-align: center;
+    color: var(--textColor);
+    font-size: 1.4rem;
+}
+.aperitivos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño responsivo */
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.aperitivos-grid article {
+    border: 1px solid #ccc;
+    background-color: var(--secondaryColor); /* Color verde */
+    border-radius: 12px;
+    padding: 1.5rem; /* Aumenta el espacio interno */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.aperitivos-grid img {
+    border-radius: 50%; /* Hace las imágenes circulares */
+    width: 120px; /* Tamaño uniforme */
+    height: 120px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    margin: 10px auto; /* Centra la imagen */
+    display: block; /* Evita espacios adicionales */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.aperitivos-grid h3 {
+    font-family: var(--fontFamily1);
+    color: var(--backgroundColor);
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.aperitivos-grid p{
+    color: var(--backgroundColor);
+    font-size: 0.9rem;
+    margin: 1px 0;
+    padding: 10px;
+}
+/* Botones de enlace */
+.aperitivos-grid a {
+    display: inline-block; /* Para que se comporte como botón */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    color: var(--backgroundColor);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(8, 8, 8, 0.921);
+}
+.aperitivos-grid a:hover {
+color: var(--linkColor);
+background-color: var(--backgroundColor);
+}
+/* Styling for the description text in the aperitivos and restaurants sections */
+.main-menu .description, 
+#aperitivos .description {
+    font-size: 1rem; /* Tamaño de texto cómodo para lectura */
+    line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
+    text-align: justify; /* Alinear el texto a ambos lados para un estilo más profesional */
+    color: var(--textColorGray); /* Un gris medio que sea agradable a la vista */
+    max-width: 800px; /* Limitar el ancho del texto para una mejor legibilidad */
+    margin: 0 auto 4rem auto; /* Centrar el texto y añadir espacio inferior */
+    padding: 0 15px; /* Espaciado interno para evitar que el texto se pegue al borde */
+    border-left: 5px solid var(--primarycolor); /* Línea de color a la izquierda como detalle visual */
+}
+/*-------- Contact Us --------------------------------------*/
+.fondo {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f2f0d190, #f1dff4bd, #e8facac0);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-section {
+    width: 95%;
+    max-width: 500px;
+    margin: 30px auto;
+    font-size: 0.9rem;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.523); /* Fondo blanco transparente */
+    backdrop-filter: blur(50px); /* Efecto desenfocado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.238);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.375); /* Borde ligeramente visible */
+  }  
+  .contact-section h2 {
+    text-align: center;
+    color: var(--secondaryColor);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .contact-section p{
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding:20px;
+  }
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: var(--linkColor);
+    color: var(--backgroundColor);
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--hoverColor);
+  }
+  
+  #formResponse {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--secondaryColor);
+  }
+/*----------------------------------Attraction--------*/
+.main-attraction {
+    text-align: center;
+}
+.main-attraction h1, .titulo{
+    font-size: 2.1rem; /* Tamaño grande y destacado */
+    font-family:var(--fontFamily3);
+    font-weight: bold; /* Negrita para más impacto */
+    color: var(--linkColor); /* Azul oscuro, en línea con tu esquema de colores */
+    text-align: center; /* Centramos el texto */
+    padding: 2rem;
+    margin-bottom: 1rem; /* Espaciado debajo del título */
+    text-transform: uppercase; /* Todo en mayúsculas para resaltar */
+    letter-spacing: 2px; /* Espaciado entre letras */
+      }
+.descripcion, .descripcion2 {
+    background-color: rgba(255, 255, 255, 0.704);
+    border-left: 5px solid var(--primerColor); /* Línea de color a la izquierda como detalle visual */
+    font-size: 1rem;
+    padding: 1.8rem;
+    line-height: 1.4;
+    text-align: center;
+    color:var(--textColorGray);
+    margin: 0 auto 10px;
+    max-width: 700px;
+    border-radius: 5px;
+    }
+/* Botones */
+.main-attraction button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+#grid-id, #list-id {
+    background-color: var(--hoverColor);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%; /* Forma circular */
+    font-size: 1.2rem;
+    border: 2px solid white; /* Borde para contraste */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#grid-id:hover, #list-id:hover {
+    background-color: white;
+    color: var(--hoverColor);
+    border-color: var(--hoverColor);
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.main-attraction button:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.cardClass{
+    background-color:#c2e47895; /* Fondo blanco para claridad */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Para que el contenido respete el borde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontFamily1);
+    justify-content: space-between;
+}
+.card-Class {
+    background-color: var(--backgroundColor); /* Fondo blanco para claridad */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Para que el contenido respete el borde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    font-family: var(--fontFamily1);
+    flex-direction: column;
+    justify-content: space-between;
+} 
+/* Contenedor principal para las tarjetas */
+#museos-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste flexible */
+    gap: 30px; /* Espaciado entre las tarjetas */
+    padding: 10px;
+    text-align: center;
+}
+#museos-cards h2{
+    font-family: var(--fontFamily1);
+}
+
+.cardClass img, .card-Class img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    transition: transform 0.3s ease;
+}
+/* Efecto hover en la imagen */
+.cardClass:hover img {
+    transform: scale(1.1); /* Zoom suave en la imagen */
+}
+/* Efecto hover en la imagen */
+.card-Class:hover img {
+    transform: scale(1.1); /* Zoom suave en la imagen */
+}
+.card-Class a{
+    text-decoration: none;
+    padding: 0.8rem 1.2rem; /*Definimos un espacio interno amplio para que los botones seas comodos y estilosos de clicar */
+    font-weight: bold;/*texto negrita*/
+    font-size: 1.3rem;
+    color: var(--linkColor); 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+/* Animación y elevación al pasar el cursor */
+.cardClass:hover, .card-Class:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+.milist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado entre elementos */
+}
+.milist .cardClass {
+    display: flex;
+    flex-direction: row; /* Alinear horizontalmente */
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+.milist .cardClass img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.milist p{
+    font-family: var(--fontFamily1);
+    padding: 20px;
+}
+.migrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+

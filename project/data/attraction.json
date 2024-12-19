@@ -1,0 +1,91 @@
+{
+  "title": "Attraction",
+  "lugares": [
+    {
+      "name": "Duomo",
+      "description": "An iconic cathedral in the heart of Milan.",
+      "imageUrl": "images/atracciones0.jpeg",
+      "address": "Viale Francesco Crispi, 2, 20154"
+    },
+    {
+      "name": "Castello Sforzesco",
+      "description": "A historic castle with stunning architecture.",
+      "imageUrl": "images/atracciones1.jpg",
+      "address": "Via Carlo Goldoni, 58, 20129"
+    },
+    {
+      "name": "Galleria Vittorio Emanuele II",
+      "description": "A luxurious shopping arcade with classic charm.",
+      "imageUrl": "images/atracciones2.webp",
+      "address": "Viale Lazio, 7, 20135"
+    },
+    {
+      "name": "Navigli",
+      "description": "A vibrant canal district with lively nightlife.",
+      "imageUrl": "images/atracciones7.jpg",
+      "address": "Via Bezzecca, 2, 20135"
+    },
+    {
+      "name": "Parco Sempione",
+      "description": "A peaceful park perfect for relaxation.",
+      "imageUrl": "images/atracciones6.jpg",
+      "address": "Via Giuseppe Antonio Borgese, 14, 20154"
+    },
+    {
+      "name": "Arco della Pace",
+      "description": "A grand arch symbolizing Milan's history.",
+      "imageUrl": "images/atraccion11.jpg",
+      "address": "Via Giuseppe Antonio Borgese, 14, 20154"
+    }
+  ],
+  "museos": [
+    {
+      "name": "Terrazze del Duomo",
+      "description": "Enjoy breathtaking views from the cathedral's terrace.",
+      "imageUrl": "images/atraccion10.jpg",
+      "address": "Via Filodrammatici, 2, 20121",
+      "phone": "+39 02 7200 3744",
+      "website": "https://www.duomomilano.it/"
+    },
+    {
+      "name": "Pinacoteca di Brera",
+      "description": "A renowned gallery showcasing Italian art.",
+      "imageUrl": "images/atracciones9.jpg",
+      "address": "Largo Isarco, 2, 20139",
+      "phone": "+39 02 5666 2610",
+      "website": "https://pinacotecabrera.org/visita/ingressi/"
+    },
+    {
+      "name": "Fondazione Prada",
+      "description": "A modern museum dedicated to contemporary art.",
+      "imageUrl": "images/prada.jpg",
+      "address": "Largo Isarco, 2, 20139",
+      "phone": "+39 02 5666 2610",
+      "website": "https://www.fondazioneprada.org/"
+    },
+    {
+      "name": "Il Cenacolo",
+      "description": "Home to da Vinci’s 'The Last Supper.'",
+      "imageUrl": "images/atracciones8.jpg",
+      "address": "Largo Isarco, 2, 20139",
+      "phone": "+39 02 5666 2610",
+      "website": "https://cenacolovinciano.org/visita/"
+    },
+    {
+      "name": "Teatro Alla Scala",
+      "description": "One of the world's most famous opera houses.",
+      "imageUrl": "images/atracciones3.jpg",
+      "address": "Largo Isarco, 2, 20139",
+      "phone": "+39 02 5666 2610",
+      "website": "https://www.teatroallascala.org/it/stagione/biglietteria/biglietti.html"
+    },
+    {
+      "name": "Stadium - San Siro",
+      "description": "A legendary football stadium in Milan.",
+      "imageUrl": "images/atraccion4.jpg",
+      "address": "Largo Isarco, 2, 20139",
+      "phone": "+39 02 5666 2610",
+      "website": "https://www.sansirostadium.com/museum-tour/"
+    }
+  ]
+}
